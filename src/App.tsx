@@ -1,17 +1,26 @@
-
+import { TableOfContentsIcon } from "lucide-react";
+import { useState } from "react";
 
 function App(){
+
+          const [open, setOpen] = useState(false);
+
   return(
+
     <div className="bg-[#EBF4F6]">
     <div className=" h-screen mr-5 ml-5 sticky top-10 items-start ">
       <nav className="flex justify-between items-center border-b border-black/10 h-[7vh] p-5 ">
         <h2 className="ml-1 font-bold">VIN</h2>
-        <ul className="flex gap-4 mr-4 font-[Roboto]">
+        <ul className={`md:flex md:static md:bg-transparent gap-4  absolute top-20  mr-4 font-[Roboto]   ${open ? "block" : "hidden"}`}>
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="">projects</a></li>
           <li><a href="">Contact</a></li>
         </ul>
+        <button className="md:hidden" onClick={()=>setOpen(!open)}>
+            <TableOfContentsIcon/>
+        </button>
+        
       </nav>
 
       <div className="ml-5 mt-30 border-b border-black/10  pb-7 ">
@@ -29,6 +38,7 @@ function App(){
         <h1 className="text-2xl font-bold mb-6 font-[sensation]">Skills</h1>
         <div className="grid grid-cols-2 list-none font-[Roboto]">
           <nav>
+           
           <li>Javascript</li>
           <li>React</li>
           <li>Typescript</li>
