@@ -9,19 +9,31 @@ function App(){
 
     <div className="bg-[#EBF4F6]">
     <div className=" h-screen mr-5 ml-5 sticky top-10 items-start ">
-      <nav className="flex justify-between items-center border-b border-black/10 h-[7vh] p-5 ">
-        <h2 className="ml-1 font-bold">VIN</h2>
-        <ul className={`md:flex md:static md:bg-transparent gap-4 md:mb-0 absolute top-40  mr-4 font-[Roboto]   ${open ? "block" : "hidden"}`}>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">projects</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-        <button className="md:hidden" onClick={()=>setOpen(!open)}>
-            <TableOfContentsIcon/>
-        </button>
-        
-      </nav>
+<nav className="relative flex justify-between items-center border-b border-black/10 h-[7vh] px-5">
+      <h2 className="font-bold">VIN</h2>
+
+      <ul
+        className={`
+          absolute top-[7vh] left-0 w-full bg-beige-700 flex flex-col items-center gap-4 py-4
+          md:flex md:flex-row md:static md:w-auto md:bg-transparent md:py-0 md:gap-4
+          ${open ? "block" : "hidden"} md:block
+          font-[Roboto]
+        `}
+      >
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <button
+        className="md:hidden"
+        onClick={() => setOpen(!open)}
+        aria-label="Toggle menu"
+      >
+        <TableOfContentsIcon />
+      </button>
+    </nav>
 
       <div className="ml-5 mt-50 border-b border-black/10  pb-7 ">
           <h1 className="text-3xl font-bold mb-6 font-[sensation]  "> About</h1>
