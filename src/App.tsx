@@ -11,7 +11,7 @@ function App(){
     <div className=" h-screen mr-5 ml-5 sticky top-10 items-start ">
       <nav className="flex justify-between items-center border-b border-black/10 h-[7vh] p-5 ">
         <h2 className="ml-1 font-bold">VIN</h2>
-        <ul className={`md:flex md:static md:bg-transparent gap-4  absolute top-20  mr-4 font-[Roboto]   ${open ? "block" : "hidden"}`}>
+        <ul className={`md:flex md:static md:bg-transparent gap-4 md:mb-0 absolute top-40  mr-4 font-[Roboto]   ${open ? "block" : "hidden"}`}>
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="">projects</a></li>
@@ -23,7 +23,7 @@ function App(){
         
       </nav>
 
-      <div className="ml-5 mt-30 border-b border-black/10  pb-7 ">
+      <div className="ml-5 mt-50 border-b border-black/10  pb-7 ">
           <h1 className="text-3xl font-bold mb-6 font-[sensation]  "> About</h1>
           <p className="text-[1.1em] font-serif text-left mb-10">
             Hi I'm Vincent I create website and web applications using <span className="text-neutral-900">React</span> <br />
