@@ -30,7 +30,15 @@ function App(){
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-<button
+          <div>
+                  <button
+        className="md:hidden"
+        onClick={() => setOpen(!open)}
+        aria-label="Toggle menu"
+      >
+         <TableOfContentsIcon/>
+      </button>
+            <button
   className="transition duration-1000 ease-out"
   onClick={() => setDark(!dark)}
 >
@@ -39,14 +47,7 @@ function App(){
     <Sun className={`transition duration-1000 ease-out ${dark ? "opacity-100" : "opacity-0"}`} />
   </div>
 </button>
-          
-      <button
-        className="md:hidden"
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle menu"
-      >
-         <TableOfContentsIcon/>
-      </button>
+          </div>
     </nav>
 
       <div className="ml-5 mt-50 border-b border-gray-700   pb-7 ">
