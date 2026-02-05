@@ -10,7 +10,7 @@ function App(){
 
   return(
 
-    <div className={`bg-[#EBF4F6] md:text-[1.3em]  ${dark ? "bg-white": "bg-black"}  ${dark ? "text-black" : "text-white"}`}>
+    <div className={`bg-[#EBF4F6] md:text-[1.3em]  ${dark ? "bg-[url(/stackw.svg)]": "bg-[url(/stackb.svg)]"}  ${dark ? "text-black" : "text-white"}`}>
     <div className=" mr-5 ml-5">
 <nav className="relative flex justify-between items-center border-b border-gray-700 h-[7vh] p-1 px-5">
       <h2 className="font-bold">VIN</h2>
