@@ -1,4 +1,4 @@
-import { TableOfContentsIcon } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Moon } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Terminal } from "lucide-react";
@@ -19,7 +19,7 @@ function App(){
 
       <ul
         className={`
-          absolute top-[7vh] left-0 w-full bg-beige-700 flex flex-col items-center gap-4 py-4
+          absolute top-[12vh] left-0 w-full bg-beige-700 flex flex-col items-center gap-4 py-4
           md:flex md:flex-row md:static md:w-auto md:bg-transparent md:py-0 md:gap-4
           ${open ? "block" : "hidden"} md:block
           font-[roboto]
@@ -30,9 +30,9 @@ function App(){
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-          <div>
+          <div className="pr-5">
             <button
-            className="transition duration-1000 ease-out"
+            className="transition duration-1000 ease-out p-5"
             onClick={() => setDark(!dark)}
           >
             <div className={`flex ${dark ? "border": "border"} px-2 py-1 rounded-2xl`}>
@@ -45,7 +45,7 @@ function App(){
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
       >
-         <TableOfContentsIcon/>
+         <Menu/>
       </button>
           </div>
     </nav>
