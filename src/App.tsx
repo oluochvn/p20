@@ -14,7 +14,7 @@ function App(){
 
     <div className={`bg-[#EBF4F6] md:text-[1.3em] transition-all duration-600 ease-out ${dark ? "bg-[#d0e9ef]": "bg-black"}  ${dark ? "text-black" : "text-white"}`}>
     <div className="">
-<nav className={`relative md:pl-[20%] md:pr-[20%] flex justify-between md:sticky top-0 backdrop-blur-[7px] items-center border-b border-gray-700 h-[10vh] p-10 px-5`}>
+<nav className={`relative md:pl-[20%] md:pr-[20%] flex justify-between md:sticky top-0 backdrop-blur-[7px] items-center border-b border-gray-700 h-[10vh] md:p-10 px-5`}>
       <h2 className="items-center flex font-bold font-mono"><Terminal/>Oluochvn</h2>
 
       <ul
