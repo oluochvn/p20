@@ -1,15 +1,18 @@
 import { TableOfContentsIcon } from "lucide-react";
+import { Moon } from "lucide-react";
+import { Mail } from "lucide-react";
+import { LucidePhoneOutgoing } from "lucide-react";
 import { useState } from "react";
 
 function App(){
-
+          const [dark,setDark] = useState(false)
           const [open, setOpen] = useState(false);
 
   return(
 
-    <div className="bg-[#EBF4F6]">
-    <div className=" h-screen mr-5 ml-5 sticky top-10 items-start ">
-<nav className="relative flex justify-between items-center border-b border-black/10 h-[7vh] px-5">
+    <div className={`bg-[#EBF4F6] md:text-[1.3em]  ${dark ? "bg-white": "bg-black"}  ${dark ? "text-black" : "text-white"}`}>
+    <div className=" mr-5 ml-5">
+<nav className="relative flex justify-between items-center border-b border-gray-700 h-[7vh] p-1 px-5">
       <h2 className="font-bold">VIN</h2>
 
       <ul
@@ -25,6 +28,9 @@ function App(){
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+      <button onClick={()=> setDark(!dark)}>
+        <Moon/>
+      </button>
 
       <button
         className="md:hidden"
@@ -35,18 +41,18 @@ function App(){
       </button>
     </nav>
 
-      <div className="ml-5 mt-50 border-b border-black/10  pb-7 ">
+      <div className="ml-5 mt-50 border-b border-gray-700   pb-7 ">
           <h1 className="text-3xl font-bold mb-6 font-[sensation]  "> About</h1>
           <p className="text-[1.1em] font-serif text-left mb-10">
-            Hi I'm Vincent I create website and web applications using <span className="text-neutral-900">React</span> <br />
+            Hi I'm Vincent I create website and web applications using React <br />
             I turn ideas into sleek, high-performance websites tailored to your vision. I'm available for freelance or remote work. 
             Let's build something we'll be proud of.
           </p>
-          <p className="underline hover:text-blue-700"><a href="">View My Work</a></p>
+          <p className="underline hover:text-blue-700 transition-all duration-500 ease-out"><a href="">View My Work</a></p>
       </div>
 
 
-      <div className="ml-5 mt-20 border-b border-black/10 pb-20">
+      <div className="ml-5 mt-20 border-b border-gray-700  pb-20">
         <h1 className="text-2xl font-bold mb-6 font-[sensation]">Skills</h1>
         <div className="grid grid-cols-2 list-none font-[Roboto]">
           <nav>
@@ -66,41 +72,41 @@ function App(){
         </div>
       </div>
 
-        <div className="ml-5 mt-5 h-[70vh] font-[Roboto]">
+        <div className="ml-5 mt-5  font-[Roboto]">
             <h1 className="text-2xl font-bold mb-6 font-[sensation]">Featured Project</h1>
-            <div className="border-b border-black/10 pb-10">
-                <a href=""><img className="rounded-2xl " src="/paytrack.png" alt="" /></a>
-                <h2 className="pt-3 font-bold text-[1.3em]">Pesatrack</h2>
+            <div className="border-b border-neutral-900  hover:border-neutral-600 transition-all duration-1000 ease-out border rounded-2xl mt-5 p-10 pl-7">
+                
+                <h2 className="pt-3 font-sans text-3xl font-bold tracking-tight  text-[1.3em]">Pesatrack</h2>
                 <p>A budgeting app to help track user spendings</p>
-                <nav className="flex list-none gap-6">
-                  <button className="bg-green-300 px-3 py-1 rounded-[10px] text-center">React</button>
-                  <button className="bg-green-300 px-3 py-1 rounded-[10px] text-center">TailwindCss</button>
-                  <button className="bg-green-300 px-3 py-1 rounded-[10px] text-center">Nodejs</button>
-                  <button className="bg-green-300 px-3 py-1 rounded-[10px] text-center">MongoDB</button>
+                <nav className="flex list-none gap-6 text-blue-900 pt-3">
+                  <button className="bg-blue-100 px-3 py-1 rounded-[10px] text-center">React</button>
+                  <button className="bg-blue-100 px-3 py-1 rounded-[10px] text-center">TailwindCss</button>
+                  <button className="bg-blue-100 px-3 py-1 rounded-[10px] text-center">Nodejs</button>
+                  <button className="bg-blue-100 px-3 py-1 rounded-[10px] text-center">MongoDB</button>
                 </nav>
                 
             </div>
-                        <div className="border-b border-black/10 pb-10">
-                <a href=""><img className="rounded-2xl " src="/" alt="portfolio" /></a>
+                        <div className="border-b border-neutral-900 hover:border-neutral-600 transition-all duration-1000 ease-out border rounded-2xl mt-5 p-10 pl-7">
                 <h2 className="pt-3 font-bold text-[1.3em]">Personal Portfolio</h2>
-                <p>Simple clean Portfolio</p>
-                <nav className="flex list-none gap-6">
-                  <button className="bg-green-300 px-3 py-1 rounded-[10px] text-center">React</button>
-                  <button className="bg-green-300 px-3 py-1 rounded-[10px] text-center">TailwindCss</button>
-                  <button className="bg-green-300 px-3 py-1 rounded-[10px] text-center">Nodejs</button>
+                <p className="">A clean and minimal portfolio showcasing my work and projects. Built with modern web technologies.</p>
+                <nav className="flex list-none gap-6 text-blue-900 pt-3">
+                  <button className="bg-blue-100 px-3 py-1 rounded-[10px] text-center">React</button>
+                  <button className="bg-blue-100 px-3 py-1 rounded-[10px] text-center">TailwindCss</button>
+                  <button className="bg-blue-100 px-3 py-1 rounded-[10px] text-center">Nodejs</button>
                 </nav>
                 
             </div>
-
-            <div className="ml-5 mt-10 border-b border-black/10  pb-7 " >
-              <h1 className="text-2xl font-bold mb-6 font-[sensation]">Let's work together</h1>
+            <div className="mt-10 text-center p-10" >
+              <h1 className="text-4xl font-bold pb-5">Let's work together</h1>
+              <div className="pb-6">
+                  <p>Have a project in mind? I'd love to hear about it. Get in touch and let's create something amazing together.</p>
+              </div>
+              <div className="gap-4 flex justify-center">
+                <button className="px-5 py-2 text-black bg-amber-200 hover:bg-amber-300 transition-all duration-500 ease-in rounded flex gap-2"> <Mail /> send me an email</button>
+                <button className="group flex px-5 py-2 hover:bg-green-600 rounded gap-2 transition-all duration-1000 ease-in">Schedule a call <LucidePhoneOutgoing className="opacity-0 group-hover:opacity-100 transition-all duration-1000 ease-in" /></button>
+              </div>
             </div>
         </div>
-      
-
-
-
-      
     </div>
     </div>
   )
