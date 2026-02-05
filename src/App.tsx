@@ -31,6 +31,15 @@ function App(){
         <li><a href="#">Contact</a></li>
       </ul>
           <div>
+            <button
+            className="transition duration-1000 ease-out"
+            onClick={() => setDark(!dark)}
+          >
+            <div className={`flex ${dark ? "border": "border"} px-2 py-1 rounded-2xl`}>
+              <Moon className={`transition duration-1000 ease-out ${dark ? "opacity-0" : "opacity-100"}`} />
+              <Sun className={`transition duration-1000 ease-out ${dark ? "opacity-100" : "opacity-0"}`} />
+            </div>
+          </button>
                   <button
         className="md:hidden"
         onClick={() => setOpen(!open)}
@@ -38,15 +47,6 @@ function App(){
       >
          <TableOfContentsIcon/>
       </button>
-            <button
-  className="transition duration-1000 ease-out"
-  onClick={() => setDark(!dark)}
->
-  <div className={`flex ${dark ? "border": "border"} px-2 py-1 rounded-2xl`}>
-    <Moon className={`transition duration-1000 ease-out ${dark ? "opacity-0" : "opacity-100"}`} />
-    <Sun className={`transition duration-1000 ease-out ${dark ? "opacity-100" : "opacity-0"}`} />
-  </div>
-</button>
           </div>
     </nav>
 
