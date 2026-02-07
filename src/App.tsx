@@ -10,7 +10,7 @@ function App(){
           const [open, setOpen] = useState(false);
 
   return(
- <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} transition-all duration-1500 ease-out min-h-screen text-[Roboto]`}>
+ <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} transition-all duration-800 ease-in  min-h-screen text-[Roboto]`}>
   <div className={`${dark ? "bg-neutral-900" : "bg-neutral-300"}`}>
     <nav className="flex items-center justify-between p-4 md:p-5 md:justify-around sticky top-10">
 
@@ -60,7 +60,7 @@ function App(){
                         </div>
                   </div>
                   <div className="md:flex md:justify-center hidden items-center md:mt-[20%]">
-                    <img className="w-70 rounded-full" src="/vnn.jpg" alt="" />
+                    <img className="w-70 rounded-full shadow-4xl border-3 border-yellow-600" src="/vnn.jpg" alt="" />
                   </div>
               </div>
 
