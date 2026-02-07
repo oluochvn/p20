@@ -9,16 +9,16 @@ function App(){
           const [open, setOpen] = useState(false);
 
   return(
- <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} min-h-screen`}>
+ <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} min-h-screen text-[Roboto]`}>
   <div className={`${dark ? "bg-red-500" : "bg-green-400"}`}>
     <nav className="flex items-center justify-between p-4 md:p-5 md:justify-around">
 
-      <h1 className="font-bold">VIN</h1>
+      <h1 className="font-bold">Oluochvn</h1>
 
       <ul className={`
         ${open ? "flex" : "hidden"} 
-        flex-col absolute top-16 left-0 w-[20%]  p-5 gap-4
-        md:static md:flex md:flex-row md:bg-transparent md:w-auto  md:p-0
+        flex-col absolute top-16 left-0 w-[20%]  p-5 gap-4 -m-1
+        md:static md:flex md:flex-row md:bg-transparent backdrop-blur-[2px] md:w-auto  md:p-0
       `}>
         <li>Home</li>
         <li>About</li>
@@ -50,6 +50,10 @@ function App(){
       </div>
     </nav>
   </div>
+
+        <div className="justify-spacearound">
+              <p>Hi, I'm Vincent Oluoch</p>
+        </div>
 </div>
 
   )
