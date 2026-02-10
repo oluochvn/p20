@@ -6,13 +6,13 @@ import { X } from "lucide-react";
 
 
 function App(){
-          const [dark,setDark] = useState(false)
+          const [dark,setDark] = useState(true)
           const [open, setOpen] = useState(false);
 
   return(
- <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} transition-all duration-800 ease-in  min-h-screen text-[Roboto]`}>
-  <div className={`${dark ? "bg-neutral-900" : "bg-neutral-300"}`}>
-    <nav className="flex items-center justify-between p-4 md:p-5 md:justify-around sticky top-10">
+ <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} transition duration-500 ease-out  min-h-screen text-[Roboto]`}>
+    
+    <nav className={`${dark ? "bg-neutral-900" : "bg-neutral-300"} flex items-center justify-between p-4 md:p-5 md:justify-around sticky top-0 z-50`}>
 
       <h1 className="font-bold">Oluochvn</h1>
 
@@ -21,9 +21,9 @@ function App(){
         flex-col absolute top-16 left-0 w-full text-center  p-5 gap-4 -m-1 font-mono font-lighter
         md:static md:flex md:flex-row md:bg-transparent backdrop-blur-[2px] md:w-auto  md:p-0
       `}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li>Contact me</li>
       </ul>
 
@@ -50,13 +50,13 @@ function App(){
 
       </div>
     </nav>
-  </div>
               <div className="md:grid md:grid-cols-2   md:pb-45">
                   <div className="md:mt-[30%] md:ml-[15%] md:text-4xl font-mono font-bold">
                       <h1 className="md:pb-10">Vincent Oluoch</h1>
                       <div>
                         <h1 className="text-yellow-600">FullStack Developer</h1>
                         <p className="md:text-[0.7em]  md:mt-2">I make modern websites that are fast and simple to use.</p>
+                        <button><img src="/github.svg" alt="" /></button>
                         </div>
                   </div>
                   <div className="md:flex md:justify-center hidden items-center md:mt-[20%]">
@@ -64,9 +64,22 @@ function App(){
                   </div>
               </div>
 
-              <div className="">
-                <h1>about</h1>
+              <div id="about" className={` md:grid md:grid-cols-2 h-screen ${dark ? "bg-neutral-900" : "bg-[#e3e4d2]"}`}>
+                <div className="flex items-center justify-center">
+                  <h1 className=" md:items-center md:text-6xl font-[saira]">ABOUT</h1>
+                </div>
+
+                <div className={`md:flex items-center justify-center ${dark ? "bg-neutral-800" : "bg-[#d7d8c5]"} p-10`}>
+                      <p className="text-[1.4em] max-w-2xl text-left" >I’m a Full-Stack Developer  who builds  Fast, Responsive, 
+                        and practical web applications. I enjoy creating clean user experiences and writing efficient, maintainable
+                         code on both the Frontend and Backend. <br /> I’m always learning,
+                         improving through real projects, and focused on building simple solutions that solve real problems.</p>
+                </div>
               </div>
+                <div id="projects" className="h-screen pt-25">
+                  <h1 className="md:text-center md:text-5xl  font-[saira]">PROJECTS</h1>
+                </div>
+
 </div>
 
   )
