@@ -4,7 +4,7 @@ import { Moon } from "lucide-react";
 import { MenuIcon } from "lucide-react";
 import { X } from "lucide-react";
 import Snowfall from "react-snowfall";
-import Wavify from 'react-wavify';
+
 
 
 
