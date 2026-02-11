@@ -78,38 +78,70 @@ function App(){
                          improving through real projects, and focused on building simple solutions that solve real problems.</p>
                 </div>
               </div>
-                <div id="projects" className={`min-h-screen ${dark ? "bg-neutral-950" : "bg-[#d7d8c5]"} pb-5`}>
-                                <h1 className="md:text-center md:text-5xl  font-[saira] pt-25">PROJECTS</h1>
-                <div className="grid grid-cols-1 max-w-4xl mx-auto gap-8 mt-10 px-4">
 
-                  <div className="bg-neutral-900 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition space-y-3">
+                <div
+                  id="projects"
+                  className={`min-h-screen ${
+                    dark
+                      ? "bg-gradient-to-b from-neutral-950 to-neutral-900 text-white"
+                      : "bg-[#d7d8c5] text-black"
+                  } pb-16`}
+                >
+                  <div className="text-center pt-24 space-y-4">
+                    <h1 className="text-5xl font-[saira] tracking-wide">PROJECTS</h1>
+                    <p className={`${dark ? "text-white/50" : "text-black/60"} max-w-xl mx-auto`}>
+                      A selection of projects focused on performance, clean UI, and real-world functionality.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-10 mt-14 px-6">
+                    <div className="group relative rounded-3xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 hover:-translate-y-2 transition duration-500">
                       <img
-                        className="rounded-xl w-full h-[45vh] object-cover"
+                        className="w-full h-[45vh] object-cover group-hover:scale-105 transition duration-500"
                         src="/website.png"
                         alt="Website Project"
                       />
-                      <h3 className="text-white text-xl font-semibold">Portfolio Website</h3>
-                  </div>
+                      <div className="p-6 space-y-3">
+                        <h3 className="text-2xl font-semibold">Portfolio Website</h3>
+                        <div className="flex gap-2 flex-wrap">
+                          <span className="text-xs px-3 py-1 rounded-full bg-amber-400 text-black">React</span>
+                          <span className="text-xs px-3 py-1 rounded-full bg-white/10">Tailwind</span>
+                          <span className="text-xs px-3 py-1 rounded-full bg-white/10">UI/UX</span>
+                        </div>
+                      </div>
+                    </div>
 
-                  <div className="bg-neutral-900 rounded-2xl p-4 shadow-lg hover:scale-[1.02] transition space-y-3">
+                    <div className="group relative rounded-3xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 hover:-translate-y-2 transition duration-500">
                       <img
-                        className="rounded-xl w-full h-[45vh] object-cover"
+                        className="w-full h-[45vh] object-cover group-hover:scale-105 transition duration-500"
                         src="/paytrack.png"
                         alt="Paytrack Project"
                       />
-                      <h3 className="text-white text-xl font-semibold">PayTrack</h3>
+                      <div className="p-6 space-y-3">
+                        <h3 className="text-2xl font-semibold">PayTrack</h3>
+                        <div className="flex gap-2 flex-wrap">
+                          <span className="text-xs px-3 py-1 rounded-full bg-amber-400 text-black">Fullstack</span>
+                          <span className="text-xs px-3 py-1 rounded-full bg-white/10">Finance</span>
+                          <span className="text-xs px-3 py-1 rounded-full bg-white/10">Dashboard</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  
-                </div>
-                <div className="flex justify-center p-6 ">
-                    <button className=" bg-amber-400 px-5 py-2 rounded text-black">view more</button>
-                  </div>
-                </div>
-                <section id="contact" className="min-h-screen flex items-center justify-center px-4">
-              <div className={`max-w-3xl w-full  rounded-2xl p-8 shadow-lg space-y-6`}>
 
-                <h2 className="text-3xl font-bold text-white text-center">Contact Me</h2>
-                <p className="text-white/60 text-center">
+                  <div className="flex justify-center mt-14">
+                    <button className="bg-amber-400 px-8 py-3 rounded-full font-semibold text-black hover:scale-105 transition">
+                      View More
+                    </button>
+                  </div>
+                </div>
+
+
+
+                <section id="contact" className="min-h-screen flex items-center justify-center px-4 ">
+              <div className={`max-w-3xl w-full  rounded-2xl p-8 shadow-lg space-y-6 "text-white" : "text-black`}>
+
+                <h2 className="text-3xl font-bold text-center">Contact Me</h2>
+                <p className="text-center">
                   Got a project, idea, or just want to say hi? Send me a message
                 </p>
 
@@ -118,13 +150,13 @@ function App(){
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full p-3 rounded-xl bg-neutral-800  outline-none focus:ring-2 focus:ring-white/20"
+                    className="w-full p-3 rounded-xl border outline-none  focus:ring-2 focus:ring-white/20"
                   />
 
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full p-3 rounded-xl bg-neutral-800 outline-none focus:ring-2 focus:ring-white/20"
+                    className="w-full p-3 rounded-xl border outline-none focus:ring-2 focus:ring-white/20"
                   />
 
                   <textarea
