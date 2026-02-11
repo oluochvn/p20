@@ -3,6 +3,8 @@ import { Sun } from "lucide-react";
 import { Moon } from "lucide-react";
 import { MenuIcon } from "lucide-react";
 import { X } from "lucide-react";
+import Snowfall from "react-snowfall";
+import Wavify from 'react-wavify';
 
 
 
@@ -12,7 +14,11 @@ function App(){
 
   return(
  <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} transition duration-500 ease-out  min-h-screen text-[Roboto]`}>
+   <div className="fixed inset-0 w-full h-full pointer-events-none  z-40">
+  <Snowfall color="#34374C" />
+    </div>
     
+
     <nav className={`${dark ? "bg-neutral-900" : "bg-neutral-300"} flex items-center justify-between p-4 md:p-5 md:justify-around sticky top-0 z-50 `}>
 
       <h1 className="font-bold">Oluochvn</h1>
@@ -67,6 +73,7 @@ function App(){
               </div>
 
               <div id="about" className={` md:grid md:grid-cols-2 h-screen ${dark ? "bg-neutral-900" : "bg-[#e3e4d2]"}`}>
+                
                 <div className="flex items-center justify-center">
                   <h1 className=" md:items-center md:text-6xl font-[saira]">ABOUT</h1>
                 </div>

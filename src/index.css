@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
-::placeholder{
-    color: grey;
+
+::placeholder {
+  color: grey;
 }
+
