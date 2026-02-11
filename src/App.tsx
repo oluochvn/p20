@@ -78,7 +78,7 @@ function App(){
                          improving through real projects, and focused on building simple solutions that solve real problems.</p>
                 </div>
               </div>
-                <div id="projects" className={`min-h-screen ${dark ? "bg-neutral-700" : "bg-[#d7d8c5]"} pb-5`}>
+                <div id="projects" className={`min-h-screen ${dark ? "bg-neutral-950" : "bg-[#d7d8c5]"} pb-5`}>
                                 <h1 className="md:text-center md:text-5xl  font-[saira] pt-25">PROJECTS</h1>
                 <div className="grid grid-cols-1 max-w-4xl mx-auto gap-8 mt-10 px-4">
 
@@ -105,9 +105,45 @@ function App(){
                     <button className=" bg-amber-400 px-5 py-2 rounded text-black">view more</button>
                   </div>
                 </div>
-                 <div id="contact" className={`min-h-screen ${dark ? "bg-neutral-700" : "bg-[#d7d8c5]"} pb-5`}>
-                       <h1 className="md:text-center md:text-5xl  font-[saira] pt-25">CONTACT</h1>
-                  </div>
+                <section id="contact" className="min-h-screen flex items-center justify-center px-4">
+              <div className={`max-w-3xl w-full  rounded-2xl p-8 shadow-lg space-y-6`}>
+
+                <h2 className="text-3xl font-bold text-white text-center">Contact Me</h2>
+                <p className="text-white/60 text-center">
+                  Got a project, idea, or just want to say hi? Send me a message
+                </p>
+
+                <form className="space-y-4">
+
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full p-3 rounded-xl bg-neutral-800  outline-none focus:ring-2 focus:ring-white/20"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full p-3 rounded-xl bg-neutral-800 outline-none focus:ring-2 focus:ring-white/20"
+                  />
+
+                  <textarea
+                    placeholder="Your Message"
+                    
+                    className={`w-full p-3 rounded-xl ${dark ? "text-white" : "text-black"} border outline-none focus:ring-2 ${dark ? "focus:ring-white" : " focus:ring-white/20"} `}
+                  ></textarea>
+
+                  <button
+                    type="submit"
+                    className={`w-full ${dark ? "bg-amber-600" : "bg-amber-300"} font-semibold p-3 rounded-xl hover:opacity-80 transition`}
+                  >
+                    Send Message
+                  </button>
+
+                </form>
+              </div>
+            </section>
+
 
 </div>
 
