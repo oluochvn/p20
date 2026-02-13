@@ -44,7 +44,7 @@ function App(){
       </div>
     </nav>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen px-6 pt-24 md:pb-45">
+    <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh] px-6 pt-16 md:pt-0 md:min-h-screen md:pb-45">
       <div className="text-center md:text-left md:mt-[30%] md:ml-[15%] text-3xl md:text-4xl font-mono font-bold space-y-6">
         <h1>Vincent Oluoch</h1>
         <div className="space-y-3">
@@ -59,13 +59,16 @@ function App(){
       </div>
     </div>
 
-    <div id="about" className={`grid grid-cols-1 md:grid-cols-2 min-h-screen ${dark ? "bg-neutral-900" : "bg-[#e3e4d2]"}`}>
-      <div className="flex items-center justify-center py-16">
-        <h1 className="text-4xl md:text-6xl font-[saira]">ABOUT</h1>
+    <div id="about" className={`px-6 py-12 md:grid md:grid-cols-2 md:min-h-screen ${dark ? "bg-neutral-900" : "bg-[#e3e4d2]"}`}>
+      <div className="space-y-6 flex flex-col justify-center md:items-center">
+        <h1 className="text-4xl md:text-6xl font-[saira] text-center md:text-left">ABOUT</h1>
+        <p className="text-lg md:text-[1.4em] max-w-2xl text-center md:text-left">
+          I’m a Full-Stack Developer who builds Fast, Responsive, and practical web applications. I enjoy creating clean user experiences and writing efficient, maintainable code on both the Frontend and Backend. I’m always learning, improving through real projects, and focused on building simple solutions that solve real problems.
+        </p>
       </div>
 
-      <div className={`flex items-center justify-center ${dark ? "bg-neutral-800" : "bg-[#d7d8c5]"} p-6 md:p-10`}>
-        <p className="text-lg md:text-[1.4em] max-w-2xl text-center md:text-left">
+      <div className={`hidden md:flex items-center justify-center ${dark ? "bg-neutral-800" : "bg-[#d7d8c5]"} p-10`}>
+        <p className="text-[1.4em] max-w-2xl text-left">
           I’m a Full-Stack Developer who builds Fast, Responsive, and practical web applications. I enjoy creating clean user experiences and writing efficient, maintainable code on both the Frontend and Backend. I’m always learning, improving through real projects, and focused on building simple solutions that solve real problems.
         </p>
       </div>
