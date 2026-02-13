@@ -44,7 +44,7 @@ function App(){
       </div>
     </nav>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh] px-6 pt-16 md:pt-0 md:min-h-screen md:pb-45">
+    <div className="grid grid-cols-1 md:grid-cols-2 min-h-[30vh] px-6 pt-16 md:pt-0 md:min-h-screen md:pb-45">
       <div className="text-center md:text-left md:mt-[30%] md:ml-[15%] text-3xl md:text-4xl font-mono font-bold space-y-6">
         <h1>Vincent Oluoch</h1>
         <div className="space-y-3">
