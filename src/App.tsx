@@ -84,7 +84,7 @@ function App(){
 
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-8 md:gap-10 mt-10 md:mt-14">
         <div className="group relative rounded-3xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 hover:-translate-y-2 transition duration-500">
-          <img className="w-full h-[35vh] md:h-[45vh] object-cover group-hover:scale-105 transition duration-500" src="/website.png" alt="" />
+          <img className="w-full h-[25vh] md:h-[45vh] object-cover group-hover:scale-105 transition duration-500" src="/website.png" alt="" />
           <div className="p-5 md:p-6 space-y-3">
             <h3 className="text-xl md:text-2xl font-semibold">Portfolio Website</h3>
             <div className="flex gap-2 flex-wrap">
@@ -96,7 +96,7 @@ function App(){
         </div>
 
         <div className="group relative rounded-3xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 hover:-translate-y-2 transition duration-500">
-          <img className="w-full h-[35vh] md:h-[45vh] object-cover group-hover:scale-105 transition duration-500" src="/paytrack.png" alt="" />
+          <img className="w-full h-[25vh] md:h-[45vh] object-cover group-hover:scale-105 transition duration-500" src="/paytrack.png" alt="" />
           <div className="p-5 md:p-6 space-y-3">
             <h3 className="text-xl md:text-2xl font-semibold">PayTrack</h3>
             <div className="flex gap-2 flex-wrap">
