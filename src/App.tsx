@@ -9,8 +9,8 @@ import Snowfall from "react-snowfall";
 
 
 function App(){
-          const [dark,setDark] = useState(true)
-          const [open, setOpen] = useState(false);
+        const [dark,setDark] = useState(true)
+        const [open, setOpen] = useState(false);
 
   return(
  <div className={`${dark ? "bg-black" : "bg-white"} ${dark ? "text-white" : "text-black"} transition duration-500 ease-out  min-h-screen text-[Roboto]`}>
