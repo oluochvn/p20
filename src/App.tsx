@@ -1,33 +1,163 @@
-import { useState } from "react";
-import { Sun, Moon, MenuIcon, X } from "lucide-react";
+import { useState, useRef } from "react";
+import { Sun, Moon, MenuIcon, X, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import Snowfall from "react-snowfall";
 
-function App() {
-  const [dark, setDark] = useState(true);
-  const [open, setOpen] = useState(false);
+const validators = {
+  name: (v) => (v.trim().length < 2 ? "Name must be at least 2 characters." : ""),
+  email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? "" : "Please enter a valid email."),
+  message: (v) => (v.trim().length < 10 ? "Message must be at least 10 characters." : ""),
+};
+
+function ContactForm({ dark }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
+  const [errors, setErrors] = useState({});
+  const [submitState, setSubmitState] = useState("idle");
+  const [serverError, setServerError] = useState("");
+  const timeoutRef = useRef(null);
+
+  const handleChange = (field) => (e) => {
+    setForm((prev) => ({ ...prev, [field]: e.target.value }));
+    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: "" }));
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    let valid = true;
+    for (const [field, fn] of Object.entries(validators)) {
+      const msg = fn(form[field]);
+      if (msg) { newErrors[field] = msg; valid = false; }
+    }
+    setErrors(newErrors);
+    return valid;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    if (!validate()) return;
+
+    setSubmitState("loading");
+    setServerError("");
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
     try {
       const res = await fetch("https://contactbck.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form)
+        body: JSON.stringify({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          message: form.message.trim(),
+        }),
+        signal: AbortSignal.timeout(10_000),
       });
-      const data = await res.json();
-      if (res.ok) {
-        setStatus("Message sent!");
-        setForm({ name: "", email: "", message: "" });
-      } else {
-        setStatus(data.error || "Error sending message");
-      }
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || `Server responded with ${res.status}.`);
+
+      setSubmitState("success");
+      setForm({ name: "", email: "", message: "" });
+      timeoutRef.current = setTimeout(() => setSubmitState("idle"), 6000);
     } catch (err) {
-      setStatus("Server error");
+      const isTimeout = err.name === "TimeoutError" || err.name === "AbortError";
+      setServerError(isTimeout ? "Request timed out. Please try again." : err.message || "Something went wrong. Please try again.");
+      setSubmitState("error");
+      timeoutRef.current = setTimeout(() => setSubmitState("idle"), 8000);
     }
   };
+
+  const isLoading = submitState === "loading";
+  const isSuccess = submitState === "success";
+
+  const inputBase = `w-full p-3 rounded-xl border bg-transparent outline-none transition focus:ring-2 ${
+    dark
+      ? "border-white/20 focus:ring-amber-500/40 placeholder:text-white/30"
+      : "border-black/15 focus:ring-amber-500/40 placeholder:text-black/30"
+  }`;
+
+  return (
+    <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+      <div className="space-y-1">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className={`${inputBase} ${errors.name ? "border-red-500/60 focus:ring-red-500/30" : ""}`}
+          value={form.name}
+          onChange={handleChange("name")}
+          disabled={isLoading || isSuccess}
+        />
+        {errors.name && (
+          <p className="text-red-400 text-xs flex items-center gap-1">
+            <AlertCircle size={12} /> {errors.name}
+          </p>
+        )}
+      </div>
+
+      <div className="space-y-1">
+        <input
+          type="email"
+          placeholder="Your Email"
+          className={`${inputBase} ${errors.email ? "border-red-500/60 focus:ring-red-500/30" : ""}`}
+          value={form.email}
+          onChange={handleChange("email")}
+          disabled={isLoading || isSuccess}
+        />
+        {errors.email && (
+          <p className="text-red-400 text-xs flex items-center gap-1">
+            <AlertCircle size={12} /> {errors.email}
+          </p>
+        )}
+      </div>
+
+      <div className="space-y-1">
+        <textarea
+          placeholder="Your Message"
+          rows={5}
+          className={`${inputBase} resize-none ${errors.message ? "border-red-500/60 focus:ring-red-500/30" : ""}`}
+          value={form.message}
+          onChange={handleChange("message")}
+          disabled={isLoading || isSuccess}
+        />
+        {errors.message && (
+          <p className="text-red-400 text-xs flex items-center gap-1">
+            <AlertCircle size={12} /> {errors.message}
+          </p>
+        )}
+      </div>
+
+      {submitState === "error" && serverError && (
+        <div className="flex items-start gap-2 text-red-400 bg-red-500/10 border border-red-500/20 rounded-xl p-3 text-sm">
+          <AlertCircle size={16} className="mt-0.5 shrink-0" />
+          <span>{serverError}</span>
+        </div>
+      )}
+
+      {isSuccess && (
+        <div className="flex items-center gap-2 text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 text-sm">
+          <CheckCircle2 size={16} className="shrink-0" />
+          <span>Message sent! I'll get back to you soon.</span>
+        </div>
+      )}
+
+      <button
+        type="submit"
+        disabled={isLoading || isSuccess}
+        className="w-full bg-amber-600 font-semibold p-3 rounded-xl hover:opacity-80 active:scale-[0.98] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+      >
+        {isLoading ? (
+          <><Loader2 size={18} className="animate-spin" /> Sending…</>
+        ) : isSuccess ? (
+          <><CheckCircle2 size={18} /> Sent!</>
+        ) : (
+          "Send Message"
+        )}
+      </button>
+    </form>
+  );
+}
+
+function App() {
+  const [dark, setDark] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className={`${dark ? "bg-black text-white" : "bg-white text-black"} transition duration-500 ease-out min-h-screen font-[Roboto]`}>
@@ -85,13 +215,13 @@ function App() {
         <div className="space-y-6 flex flex-col justify-center md:items-center text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-[saira]">ABOUT</h1>
           <p className="text-lg md:text-[1.4em] max-w-2xl mx-auto md:mx-0">
-            I’m a Full-Stack Developer who builds Fast, Responsive, and practical web applications. I enjoy creating clean user experiences and writing efficient, maintainable code on both the Frontend and Backend. I’m always learning, improving through real projects, and focused on building simple solutions that solve real problems.
+            I'm a Full-Stack Developer who builds Fast, Responsive, and practical web applications. I enjoy creating clean user experiences and writing efficient, maintainable code on both the Frontend and Backend. I'm always learning, improving through real projects, and focused on building simple solutions that solve real problems.
           </p>
         </div>
 
         <div className={`hidden md:flex items-center justify-center ${dark ? "bg-neutral-800" : "bg-[#d7d8c5]"} p-10`}>
           <p className="text-[1.4em] max-w-2xl text-left">
-            I’m a Full-Stack Developer who builds Fast, Responsive, and practical web applications. I enjoy creating clean user experiences and writing efficient, maintainable code on both the Frontend and Backend. I’m always learning, improving through real projects, and focused on building simple solutions that solve real problems.
+            I'm a Full-Stack Developer who builds Fast, Responsive, and practical web applications. I enjoy creating clean user experiences and writing efficient, maintainable code on both the Frontend and Backend. I'm always learning, improving through real projects, and focused on building simple solutions that solve real problems.
           </p>
         </div>
       </div>
@@ -140,23 +270,14 @@ function App() {
       <section id="contact" className="min-h-screen flex items-center justify-center px-4 py-20">
         <div className={`max-w-3xl w-full rounded-3xl p-8 shadow-lg space-y-6 ${dark ? "bg-gradient-to-br from-neutral-900 to-black border border-white/10" : "bg-white border border-black/10"}`}>
           <h2 className="text-2xl md:text-3xl font-bold text-center">Contact Me</h2>
-          <p className="text-center text-sm md:text-base">
-            Got a project, idea, or just want to say hi? Send me a message
+          <p className="text-center text-sm md:text-base opacity-60">
+            Got a project, idea, or just want to say hi? Send me a message.
           </p>
-
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Your Name" className="w-full p-3 rounded-xl border bg-transparent outline-none focus:ring-2 focus:ring-white/20" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}/>
-            <input type="email" placeholder="Your Email" className="w-full p-3 rounded-xl border bg-transparent outline-none focus:ring-2 focus:ring-white/20" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}/>
-            <textarea placeholder="Your Message" className="w-full p-3 rounded-xl border bg-transparent outline-none focus:ring-2 focus:ring-white/20" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}/>
-            <button type="submit" className="w-full bg-amber-600 font-semibold p-3 rounded-xl hover:opacity-80 transition">
-              Send Message
-            </button>
-          </form>
-          <p className="text-center text-sm mt-2">{status}</p>
+          <ContactForm dark={dark} />
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default App;
