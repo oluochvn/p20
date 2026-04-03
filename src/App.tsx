@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className={`${dark ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-900"} transition-colors duration-500 font-sans min-h-screen`}>
+    <div className={`${dark ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-900"}'s transition-colors duration-500 font-sans min-h-screen`}>
       {/* Navbar */}
       <nav className="fixed top-0 w-full backdrop-blur-md bg-opacity-70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -71,7 +71,7 @@ function App() {
             I create fast, clean, and modern websites and web applications. Simple, elegant, and efficient code is my priority.
           </p>
           <div className="flex justify-center md:justify-start gap-4">
-            <a href="https://github.com" target="_blank" className="px-4 py-2 bg-yellow-500 text-black rounded-lg font-medium hover:opacity-90">GitHub</a>
+            <a href="https://github.com/oluochvn" target="_blank" className="px-4 py-2 bg-yellow-500 text-black rounded-lg font-medium hover:opacity-90">GitHub</a>
             <a href="#contact" className="px-4 py-2 border border-yellow-500 rounded-lg font-medium hover:bg-yellow-500 hover:text-black transition">Contact Me</a>
           </div>
         </div>
