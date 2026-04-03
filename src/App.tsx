@@ -1,15 +1,23 @@
 import { useState } from "react";
 import { Sun, Moon, MenuIcon, X } from "lucide-react";
 
+interface FormState {
+  name: string;
+  email: string;
+  message: string;
+}
+
 function App() {
   const [dark, setDark] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState<FormState>({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Sending...");
     try {
