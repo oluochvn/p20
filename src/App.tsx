@@ -169,7 +169,7 @@ function App() {
           <div className="space-y-4">
             <h2 className="text-4xl font-bold mb-4">About Me</h2>
 
-            <p className={dark ? "text-gray-300" : "text-gray-700"}>
+            <p className={dark ? "text-white" : "text-white"}>
               I am a Fullstack Developer focused on building responsive,
               efficient, and user-friendly web applications. I enjoy clean UI/UX
               design, practical solutions, and maintainable code. Learning and
