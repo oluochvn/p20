@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className={`${dark ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-900"}'s transition-colors duration-500 font-sans min-h-screen`}>
+    <div className={`${dark ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-900"}'transition-colors duration-500 font-sans min-h-screen`}>
       {/* Navbar */}
       <nav className="fixed top-0 w-full backdrop-blur-md bg-opacity-70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
