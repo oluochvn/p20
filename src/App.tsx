@@ -249,6 +249,30 @@ function App() {
               </div>
             </div>
           </div>
+                    <div
+            className={`border rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition transform ${
+              dark ? "border-gray-700 bg-gray-800" : "border-gray-200 bg-white"
+            }`}
+          >
+            <img
+              src="/shamba.png"
+              alt="shamba"
+              className="w-full h-64 object-cover"
+            />
+
+            <div className="p-6 space-y-2">
+              <h3 className="text-2xl font-semibold">Shamba records</h3>
+
+              <div className="flex gap-2 flex-wrap">
+                <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs">
+                  Fullstack
+                </span>
+                <span className="bg-green-200 text-gray-800 px-2 py-1 rounded-full text-xs">
+                  agriculture
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
