@@ -17,6 +17,8 @@ function App() {
   });
   const [status, setStatus] = useState("");
 
+  const navLinks = ["home", "about", "projects", "contact"];
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -56,8 +58,6 @@ function App() {
       setStatus("Server error");
     }
   };
-
-  const navLinks = ["home", "about", "projects", "contact"];
 
   return (
     <div
@@ -155,7 +155,7 @@ function App() {
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
           <img
             src="/vnn.jpg"
-            alt="Vincent"
+            alt="Vincent Oluoch"
             className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-yellow-500"
           />
         </div>
@@ -169,7 +169,7 @@ function App() {
           <div className="space-y-4">
             <h2 className="text-4xl font-bold mb-4">About Me</h2>
 
-            <p className={dark ? "text-white" : "text-white"}>
+            <p className={dark ? "text-gray-300" : "text-gray-700"}>
               I am a Fullstack Developer focused on building responsive,
               efficient, and user-friendly web applications. I enjoy clean UI/UX
               design, practical solutions, and maintainable code. Learning and
@@ -199,15 +199,15 @@ function App() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            className={`border rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition transform ${
+            className={`border rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 transition transform ${
               dark ? "border-gray-700 bg-gray-800" : "border-gray-200 bg-white"
             }`}
           >
             <img
               src="/website.png"
-              alt="Portfolio"
+              alt="Portfolio Website"
               className="w-full h-64 object-cover"
             />
 
@@ -226,13 +226,13 @@ function App() {
           </div>
 
           <div
-            className={`border rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition transform ${
+            className={`border rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 transition transform ${
               dark ? "border-gray-700 bg-gray-800" : "border-gray-200 bg-white"
             }`}
           >
             <img
               src="/paytrack.png"
-              alt="PayTrack"
+              alt="PayTrack App"
               className="w-full h-64 object-cover"
             />
 
@@ -249,26 +249,27 @@ function App() {
               </div>
             </div>
           </div>
-                    <div
-            className={`border rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition transform ${
+
+          <div
+            className={`border rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 transition transform ${
               dark ? "border-gray-700 bg-gray-800" : "border-gray-200 bg-white"
             }`}
           >
             <img
               src="/shamba.png"
-              alt="shamba"
+              alt="Shamba Records App"
               className="w-full h-64 object-cover"
             />
 
             <div className="p-6 space-y-2">
-              <h3 className="text-2xl font-semibold">Shamba records</h3>
+              <h3 className="text-2xl font-semibold">Shamba Records</h3>
 
               <div className="flex gap-2 flex-wrap">
                 <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs">
                   Fullstack
                 </span>
                 <span className="bg-green-200 text-gray-800 px-2 py-1 rounded-full text-xs">
-                  agriculture
+                  Agriculture
                 </span>
               </div>
             </div>
