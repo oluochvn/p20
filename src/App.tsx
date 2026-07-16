@@ -4,6 +4,7 @@ import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import { X } from 'lucide-react'
 import { SquareTerminal } from 'lucide-react';
+import { DottedGlowBackground } from "./component/dotted-glow-background";
 
 
 
@@ -12,7 +13,8 @@ function App(){
   const[open,setOpen] = useState(false);
   
   return (
-    <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'} min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
+    <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'}  min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
+      <DottedGlowBackground className="opacity-40"/>
     <nav className=" flex justify-between items-center p-4 ml-5 mr-5 h-[100px]">
       <div className="flex items-center space-x-2">
         <h1 className=" flex font-caveat text-2xl"><SquareTerminal /></h1>
