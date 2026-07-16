@@ -3,6 +3,7 @@ import { Sun } from 'lucide-react';
 import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import { X } from 'lucide-react'
+import { SquareTerminal } from 'lucide-react';
 
 
 
@@ -11,10 +12,11 @@ function App(){
   const[open,setOpen] = useState(false);
   
   return (
-    <div className={`${darkMode ? 'bg-gray-950 text-white' : 'bg-neutral-200 text-gray-800'} h-screen  w-full h-[300px] overflow-hidden transition-colors duration-700 font-jetbrains-mono`}>
+    <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'} min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
     <nav className=" flex justify-between items-center p-4 ml-5 mr-5 h-[100px]">
-      <div>
-        <h1 className="font-caveat text-2xl">Vincent Oluoch</h1>
+      <div className="flex items-center space-x-2">
+        <h1 className=" flex font-caveat text-2xl"><SquareTerminal /></h1>
+        <h1>vnn</h1>
       </div>
       <div className=" lg:flex hidden space-x-5 ">
         <ul className="lg:flex hidden space-x-5">
@@ -30,7 +32,7 @@ function App(){
       </button>
       
       <div className="flex">
-       <button className=" lg:hidden transition-all duration-800"
+       <button className=" lg:hidden transition-transform duration-1800"
   onClick={() => setOpen(!open)}
 >
   {open ? <X /> : <Menu />}
@@ -39,13 +41,35 @@ function App(){
       </div>
       </div>
     </nav>
-    <div className={`lg:hidden ${open ? 'block' : 'hidden'} p-4 text-center transition-transform duration-700 bg-gray-600 w-full text-white`}>
+    <div className={`lg:hidden absolute ${open ? 'block' : 'hidden'} p-4 text-center transition-transform duration-700 bg-gray-600 w-full text-white`}>
       <ul className="space-y-2  ">
-        <li><a href="#home" className="hover:text-blue-900 pb-7">Home</a></li>
+        <li><a href="#home" className="hover:text-blue-900 hover: pb-7">Home</a></li>
         <li><a href="#About" className="hover:text-blue-900 pb-7">About</a></li>
         <li><a href="#Projects" className="hover:text-blue-900 pb-7">Projects</a></li>
         <li><a href="#Contact" className="hover:text-blue-900 pb-7">Contact</a></li>
       </ul>
+    </div>
+
+    <div className="flex m-10 h-[300px]">
+      <p>
+        <h4 className="text-2xl">HI , I'M</h4>
+        <h1 className="text-7xl">VINCENT <br />OLUOCH</h1><br />
+      </p>
+      <img className="ml-10 rounded-full w-50 h-50 object-cover" src="/vnn.jpg" alt="" />
+    </div>
+
+      <div className="block m-10 h-[300px]">
+      <div>
+        <h2>About</h2>
+      </div>
+      <div></div>
+    </div>
+
+      <div className="block m-10 h-[300px]">
+      <div>
+        <h2>About</h2>
+      </div>
+      <div></div>
     </div>
   </div>
   )
