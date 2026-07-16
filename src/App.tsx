@@ -50,13 +50,23 @@ function App(){
       </ul>
     </div>
 
-    <div className="flex m-10 h-[300px]">
-      <p>
-        <h4 className="text-2xl">HI , I'M</h4>
-        <h1 className="text-7xl">VINCENT <br />OLUOCH</h1><br />
-      </p>
-      <img className="ml-10 rounded-full w-50 h-50 object-cover" src="/vnn.jpg" alt="" />
-    </div>
+    <div className="grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center items-center">
+  <div>
+    <h4 className="text-2xl">HI, I'M</h4>
+    <h1 className="text-7xl">
+      VINCENT <br />
+      OLUOCH
+    </h1>
+  </div>
+
+  <div className="flex justify-center items-center">
+    <img
+      className="rounded-full w-70 h-70 object-cover"
+      src="/vbg.jpeg"
+      alt="Vincent Oluoch"
+    />
+  </div>
+</div>
 
       <div className="block m-10 h-[300px]">
       <div>
