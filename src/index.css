@@ -1,3 +1,9 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
+@theme {
+  --font-big-shoulders: "Big Shoulders Inline", sans-serif;
+  --font-amarante: "Amarante", serif;
+  --font-caveat: "Caveat", cursive;
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+}
