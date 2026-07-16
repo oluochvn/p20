@@ -5,6 +5,7 @@ import { Menu } from 'lucide-react';
 import { X } from 'lucide-react'
 import { SquareTerminal } from 'lucide-react';
 import { DottedGlowBackground } from "./component/dotted-glow-background";
+import { BackgroundRippleEffect } from "./component/background-ripple-effect";
 
 
 
@@ -13,8 +14,9 @@ function App(){
   const[open,setOpen] = useState(false);
   
   return (
-    <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'}  min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
-      <DottedGlowBackground className="opacity-40"/>
+    <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'} z-10  min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
+      <DottedGlowBackground className="absolute   opacity-20 "/>
+      <BackgroundRippleEffect className="absolute inset-0 z-[1]" />
     <nav className=" flex justify-between items-center p-4 ml-5 mr-5 h-[100px]">
       <div className="flex items-center space-x-2">
         <h1 className=" flex font-caveat text-2xl"><SquareTerminal /></h1>
