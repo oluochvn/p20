@@ -15,7 +15,7 @@ function App(){
   
   return (
     <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'} z-10  min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
-    <nav className=" flex justify-between items-center p-4 ml-5 mr-5 h-[100px]">
+    <nav className=" flex justify-between items-center p-4 ml-5 mr-5 h-[100px] top-0 sticky z-10 backdrop-blur-sm">
       <div className="flex items-center space-x-2">
         <h1 className=" flex font-caveat text-2xl"><SquareTerminal /></h1>
         <h1>vnn</h1>
@@ -37,18 +37,18 @@ function App(){
        <button className=" lg:hidden transition-transform duration-1800"
   onClick={() => setOpen(!open)}
 >
-  {open ? <X /> : <Menu />}
+  {open ? <X className="text-red-600 font-bold" /> : <Menu />}
 </button>
 
       </div>
       </div>
     </nav>
-    <div className={`lg:hidden absolute ${open ? 'block' : 'hidden'} p-4 text-center transition-transform duration-700 bg-gray-600 w-full text-white`}>
+    <div className={`lg:hidden absolute ${open ? 'block' : 'hidden'} p-4 text-center transition-transform duration-700  w-full text-white backdrop-blur-sm`}>
       <ul className="space-y-2  ">
-        <li><a href="#home" className="hover:text-blue-900 hover: pb-7">Home</a></li>
-        <li><a href="#About" className="hover:text-blue-900 pb-7">About</a></li>
-        <li><a href="#Projects" className="hover:text-blue-900 pb-7">Projects</a></li>
-        <li><a href="#Contact" className="hover:text-blue-900 pb-7">Contact</a></li>
+        <li><a href="#home" className="hover:text-green-600 hover: pb-7">Home</a></li>
+        <li><a href="#About" className="hover:text-green-600 pb-7">About</a></li>
+        <li><a href="#Projects" className="hover:text-green-600 pb-7">Projects</a></li>
+        <li><a href="#Contact" className="hover:text-green-600 pb-7">Contact</a></li>
       </ul>
     </div>
 
