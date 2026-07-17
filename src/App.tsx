@@ -64,7 +64,7 @@ function App(){
 
   <div className="flex justify-center items-center">
     <img
-      className="rounded-full md:w-50 md:h-50 lg:w-70 lg:h-70 object-cover"
+      className="rounded-full md:w-20 md:h-20 lg:w-70 lg:h-70 object-cover"
       src="/vbg.jpeg"
       alt="Vincent Oluoch"
     />
