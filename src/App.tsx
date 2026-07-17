@@ -39,7 +39,7 @@ function App(){
 >
   {open ? <X /> : <Menu />}
 </button>
-         
+
       </div>
       </div>
     </nav>
@@ -62,7 +62,7 @@ function App(){
     <h4 className="text-green-600 font-bold text-2xl pt-5 ">Fullstack Developer</h4>
   </div>
 
-  <div className="flex justify-center items-center">
+  <div className="flex justify-center items-center sm:ml-7">
     <img
       className="rounded-full sm:w-70 sm:h-70 lg:w-70 lg:h-70 p-4 bg-white object-cover border-2 border-green-600 transition-transform duration-700 hover:scale-110"
       src="/vbg.jpeg"
