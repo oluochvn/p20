@@ -4,6 +4,8 @@ import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import { X } from 'lucide-react'
 import { SquareTerminal } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { DottedGlowBackground } from "./component/dotted-glow-background";
 //import { BackgroundRippleEffect } from "./component/background-ripple-effect";
 
@@ -37,13 +39,13 @@ function App(){
        <button className=" lg:hidden transition-transform duration-1800"
   onClick={() => setOpen(!open)}
 >
-  {open ? <X className="text-red-600 font-bold" /> : <Menu />}
+  {open ? <X className="text-[#16C47F] font-bold" /> : <Menu />}
 </button>
 
       </div>
       </div>
     </nav>
-    <div className={`lg:hidden absolute ${open ? 'block' : 'hidden'} p-4 text-center transition-transform duration-700  w-full text-white backdrop-blur-sm`}>
+    <div className={`lg:hidden absolute ${open ? 'block' : 'hidden'} p-4 text-center transition-transform duration-700 top-20 fixed  w-full backdrop-blur-sm`}>
       <ul className="space-y-2  ">
         <li><a href="#home" className="hover:text-green-600 hover: pb-7">Home</a></li>
         <li><a href="#About" className="hover:text-green-600 pb-7">About</a></li>
@@ -52,17 +54,19 @@ function App(){
       </ul>
     </div>
 
-    <div className="grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center items-center">
-  <div className="ml-2">
+    <div className="lg:pl-15 lg:pr15 grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center justify-items-center">
+  <div className="">
     <h4 className="text-2xl ml-2">HI, I'M</h4>
     <h1 className="text-7xl font-bold">
       VINCENT <br />
       OLUOCH
     </h1>
-    <h4 className="text-green-600 font-bold text-2xl pt-5 ">Fullstack Developer</h4>
+    <h4 className="text-green-600 font-bold text-2xl pt-5 ">Fullstack Developer</h4> 
+    
+     <div className="flex items-center space-x-2 mt-4 font-bold hover:text-green-600 "><MapPin /><h2>KENYA</h2></div>
   </div>
 
-  <div className="flex justify-center items-center sm:ml-7">
+  <div className="flex  items-center  lg:pr20 sm:ml-7">
     <img
       className="rounded-full sm:w-70 sm:h-70 lg:w-70 lg:h-70 p-4 bg-white object-cover border-2 border-green-600 transition-transform duration-700 hover:scale-110"
       src="/vbg.jpeg"
