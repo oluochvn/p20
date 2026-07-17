@@ -15,8 +15,6 @@ function App(){
   
   return (
     <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'} z-10  min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
-      <DottedGlowBackground className="absolute   opacity-20 "/>
-      <BackgroundRippleEffect className="absolute inset-0 z-[1]" />
     <nav className=" flex justify-between items-center p-4 ml-5 mr-5 h-[100px]">
       <div className="flex items-center space-x-2">
         <h1 className=" flex font-caveat text-2xl"><SquareTerminal /></h1>
@@ -55,17 +53,18 @@ function App(){
     </div>
 
     <div className="grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center items-center">
-  <div>
-    <h4 className="text-2xl">HI, I'M</h4>
-    <h1 className="text-7xl">
+  <div className="ml-2">
+    <h4 className="text-2xl ml-2">HI, I'M</h4>
+    <h1 className="text-7xl font-bold">
       VINCENT <br />
       OLUOCH
     </h1>
+    <h4 className="text-green-900 font-bold text-2xl ">Fullstack Developer</h4>
   </div>
 
   <div className="flex justify-center items-center">
     <img
-      className="rounded-full w-70 h-70 object-cover"
+      className="rounded-full md:w-50 md:h-50 lg:w-70 lg:h-70 object-cover"
       src="/vbg.jpeg"
       alt="Vincent Oluoch"
     />
