@@ -5,7 +5,7 @@ import { Menu } from 'lucide-react';
 import { X } from 'lucide-react'
 import { SquareTerminal } from 'lucide-react';
 import { MapPin } from 'lucide-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { DottedGlowBackground } from "./component/dotted-glow-background";
 //import { BackgroundRippleEffect } from "./component/background-ripple-effect";
 
