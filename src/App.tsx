@@ -4,8 +4,8 @@ import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import { X } from 'lucide-react'
 import { SquareTerminal } from 'lucide-react';
-import { DottedGlowBackground } from "./component/dotted-glow-background";
-import { BackgroundRippleEffect } from "./component/background-ripple-effect";
+//import { DottedGlowBackground } from "./component/dotted-glow-background";
+//import { BackgroundRippleEffect } from "./component/background-ripple-effect";
 
 
 
@@ -59,7 +59,7 @@ function App(){
       VINCENT <br />
       OLUOCH
     </h1>
-    <h4 className="text-green-900 font-bold text-2xl ">Fullstack Developer</h4>
+    <h4 className="text-green-600 font-bold text-2xl pt-5 ">Fullstack Developer</h4>
   </div>
 
   <div className="flex justify-center items-center">
