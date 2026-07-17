@@ -64,7 +64,7 @@ function App(){
 
   <div className="flex justify-center items-center">
     <img
-      className="rounded-full md:w-20 md:h-20 lg:w-70 lg:h-70 object-cover"
+      className="rounded-full sm:w-70 sm:h-70 lg:w-70 lg:h-70 p-4 bg-white object-cover border-2 border-green-600 transition-transform duration-700 hover:scale-110"
       src="/vbg.jpeg"
       alt="Vincent Oluoch"
     />
