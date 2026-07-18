@@ -75,24 +75,23 @@ function App(){
   </div>
 </div>
 
-      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[400px] pt-10 pl-30`}>
+      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[470px] pt-10 pl-30  transition-colors duration-3500 `}>
     
         <h1 className="text-3xl font-bold ">Skills</h1>
       <div>
-      <div className="mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6">
-        <h2 className="mb-3 text-lg font-semibold tracking-wide">
-          Frontend
-        </h2>
-
-        <p className="text-gray-400 leading-relaxed">
-          HTML, TypeScript, React, React Native, Tailwind CSS, and CSS.
-        </p>
-      </div>
-        <div className="mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6">
+        <div className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`}>
+          <h2 className="mb-3 text-lg font-semibold tracking-wide">
+            Frontend
+          </h2>
+          <p className=" leading-relaxed">
+            HTML / TypeScript / React / React Native/ CSS / Tailwind CSS.
+          </p>
+        </div>
+        <div className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
           <h2 className="mb-3 text-lg font-semibold tracking-wide">
             Backend
           </h2>
-          <p className="text-gray-400 leading-relaxed">
+          <p className=" leading-relaxed">
             Nodejs/ Express / REST APIs 
             MongoDB / Supabase / MySQL / Postgre
           </p>
