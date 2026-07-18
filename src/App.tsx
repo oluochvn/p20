@@ -54,11 +54,11 @@ function App(){
       </ul>
     </div>
 
-    <div className="lg:pl-15 lg:pr15 grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center justify-items-center h-[320px]">
+    <div className="lg:pl-15 lg:pr15 grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center justify-items-center h-[320px] mb-7">
   <div className="">
-    <h4 className="text-2xl ml-2">HI, I'M</h4>
-    <h1 className="text-5xl font-bold">
-      VINCENT OLUOCH
+    <h4 className="text-2xl ml-2 uppercase">hi, i'm</h4>
+    <h1 className="text-5xl font-bold uppercase">
+      vincent Oluoch
     </h1>
     <h4 className="text-green-600 font-bold text-2xl  ">Fullstack Developer</h4> 
     <p className="pt-4">I solve design problems, create intuitive user interfaces, and craft engaging web experiences and modern web applications.</p>
@@ -75,11 +75,29 @@ function App(){
   </div>
 </div>
 
-      <div className="block m-10 h-[300px]">
-      <div className="ml-17 mr-15">
-        <h1 className="text-4xl font-bold">Skills</h1>
-      </div> 
-      <div></div>
+      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[400px] pt-10 pl-30`}>
+    
+        <h1 className="text-3xl font-bold ">Skills</h1>
+      <div>
+      <div className="mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6">
+        <h2 className="mb-3 text-lg font-semibold tracking-wide">
+          Frontend
+        </h2>
+
+        <p className="text-gray-400 leading-relaxed">
+          HTML, TypeScript, React, React Native, Tailwind CSS, and CSS.
+        </p>
+      </div>
+        <div className="mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6">
+          <h2 className="mb-3 text-lg font-semibold tracking-wide">
+            Backend
+          </h2>
+          <p className="text-gray-400 leading-relaxed">
+            Nodejs/ Express / REST APIs 
+            MongoDB / Supabase / MySQL / Postgre
+          </p>
+        </div>
+      </div>
     </div>
 
       <div className="block m-10 h-[300px]">
