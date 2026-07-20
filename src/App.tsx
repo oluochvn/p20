@@ -75,12 +75,11 @@ function App(){
   </div>
 </div>
 
-      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[520px] pt-10 pl-30  transition-colors duration-3500 `}>
+      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[520px] lg:pt-10 lg:pl-30 sm:block sm:h-full sm:pl-15 sm:pt-5 transition-colors duration-3500 h-[520px] `}>
         <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
+        <div className="lg:flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
 
-        <div className="flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
-
-        <div className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`}>
+        <div  className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
           <h2 className="mb-3 text-lg font-semibold tracking-wide">
             Frontend
           </h2>
@@ -98,14 +97,14 @@ function App(){
           </p>
         </div>
         </div>
-              <p className="text-center text-lg p-15  tracking-wide ">
+              <p className="lg:text-center text-lg sm:text-base p-15 sm:pl-2 sm:pt-5 sm:block  tracking-wide ">
                 I believe great software comes from continuous learning and attention to detail. <br />
                 I'm always improving my skills.
               </p>
     </div>
 
-    <div className={`${darkMode ? 'bg-[#081c15] text-white' : ' bg-[#EAEFEF]'} h-[40px] transition-colors duration-3500 pl-30 pt-10 h-[520px]`}>
-      <h1 className="text-3xl font-bold "><span>02</span> Projects</h1>
+    <div className={`${darkMode ? 'bg-[#081c15] text-white border-t-2 border-gray-600' : 'bg-[#EAEFEF] border-t-2 border-gray-200'} h-[40px] transition-colors duration-3500 pl-30 pt-10 h-[520px] sm:pl-15 border-t-2 border-gray-300`}>
+      <h1 className="text-3xl font-bold "><span>.02</span>Projects</h1>
     </div>
 
   </div>
