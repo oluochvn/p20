@@ -24,10 +24,10 @@ function App(){
       </div>
       <div className=" lg:flex hidden space-x-5 ">
         <ul className="lg:flex hidden space-x-5">
-          <li><a href="#home" className="hover:text-green-600">Home</a></li>
-          <li><a href="#About" className="hover:text-green-600">About</a></li>
-          <li><a href="#Projects" className="hover:text-green-600">Projects</a></li>
-          <li><a href="#Contact" className="hover:text-green-600">Contact</a></li>
+          <li><a href="#home" className="hover:text-green-600 hover transition-transform duration-600">Home</a></li>
+          <li><a href="#About" className="hover:text-green-600 hover:transition-transform duration-600">About</a></li>
+          <li><a href="#Projects" className="hover:text-green-600 hover:transition-transform duration-600">Projects</a></li>
+          <li><a href="#Contact" className="hover:text-green-600 hover:transition-transform duration-600">Contact</a></li>
         </ul>
       </div>
       <div className="flex items-center">
@@ -75,10 +75,11 @@ function App(){
   </div>
 </div>
 
-      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[470px] pt-10 pl-30  transition-colors duration-3500 `}>
-    
-        <h1 className="text-3xl font-bold ">Skills</h1>
-      <div>
+      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[520px] pt-10 pl-30  transition-colors duration-3500 `}>
+        <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
+
+        <div className="flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
+
         <div className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`}>
           <h2 className="mb-3 text-lg font-semibold tracking-wide">
             Frontend
@@ -96,15 +97,17 @@ function App(){
             MongoDB / Supabase / MySQL / Postgre
           </p>
         </div>
-      </div>
+        </div>
+              <p className="text-center text-lg p-15  tracking-wide ">
+                I believe great software comes from continuous learning and attention to detail. <br />
+                I'm always improving my skills.
+              </p>
     </div>
 
-      <div className="block m-10 h-[300px]">
-      <div className="ml-17 mr-15">
-        <h1 className="text-4xl font-bold">About</h1>
-      </div> 
-      <div></div>
+    <div className={`${darkMode ? 'bg-[#081c15] text-white' : ' bg-[#EAEFEF]'} h-[40px] transition-colors duration-3500 pl-30 pt-10 h-[520px]`}>
+      <h1 className="text-3xl font-bold "><span>02</span> Projects</h1>
     </div>
+
   </div>
   )
 }
