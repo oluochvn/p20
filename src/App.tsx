@@ -106,13 +106,13 @@ function App(){
   <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
 <div className="flex items-center justify-between mx-40 gap-8 p-20">
   
-  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-green-500">
+  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7">
     <h1 className="text-2xl font-semibold text-center">
       Shamba Records
     </h1>
   </div>
 
-  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-green-500">
+  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7">
     <h1 className="text-2xl font-semibold text-center">
       Pesatrak
     </h1>
