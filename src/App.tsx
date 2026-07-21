@@ -75,12 +75,12 @@ function App(){
   </div>
 </div>
 
-      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} h-[520px] lg:pt-10 lg:pl-30 sm:block sm:h-full sm:pl-15 sm:pt-5 transition-colors duration-3500 h-[520px] `}>
+      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} lg:pt-10 lg:pl-30 sm:block sm:h-full lg:h-[520px] sm:pl-15 sm:pt-5 transition-colors duration-3500`}>
         <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
         <div className="lg:flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
 
         <div  className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
-          <h2 className="mb-3 text-lg font-semibold tracking-wide">
+          <h2 className="mb-3 text-lg font-semibold tracking-wide text-green-600">
             Frontend
           </h2>
           <p className=" leading-relaxed">
@@ -88,8 +88,8 @@ function App(){
           </p>
         </div>
         <div className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
-          <h2 className="mb-3 text-lg font-semibold tracking-wide">
-            Backend
+          <h2 className="mb-3 text-lg font-semibold tracking-wide text-green-600">
+            Backend and Databases
           </h2>
           <p className=" leading-relaxed">
             Nodejs/ Express / REST APIs 
@@ -97,14 +97,39 @@ function App(){
           </p>
         </div>
         </div>
-              <p className="lg:text-center text-lg sm:text-base p-15 sm:pl-2 sm:pt-5 sm:block  tracking-wide ">
+              <p className="lg:text-center text-lg sm:text-base lg:mt-15 sm:pl-2 sm:pt-5 sm:block  tracking-wide ">
                 I believe great software comes from continuous learning and attention to detail. <br />
                 I'm always improving my skills.
               </p>
     </div>
 
-    <div className={`${darkMode ? 'bg-[#081c15] text-white border-t-2 border-gray-600' : 'bg-[#EAEFEF] border-t-2 border-gray-200'} h-[40px] transition-colors duration-3500 pl-30 pt-10 h-[520px] sm:pl-15 border-t-2 border-gray-300`}>
+    <div className={`${darkMode ? 'bg-[#00000F]/40 text-white' : 'bg-[#E2DFD0]/10'} transition-colors duration-3500 pl-30 pt-10 h-[520px] sm:pl-15 `}>
       <h1 className="text-3xl font-bold "><span>.02</span>Projects</h1>
+      <p className="m-7 text-2xl text-green-600">Featured</p>
+
+      <div className=" flex flex-col lg:flex-row gap-5 ml-14 mr-14">
+       <div
+  className={`${
+    darkMode ? "border-gray-700 bg-[#111827]" : "border-gray-300 bg-white"
+  } mt-5 w-1/2 border rounded-xl p-4 shadow-md hover:shadow-lg transition duration-300`}
+>
+  <img
+    src="/shamba1.png"
+    alt="Shamba Records"
+    className="w-full h-40 object-cover rounded-lg"
+  />
+
+  <h4 className="mt-4 text-lg font-semibold">Shamba Records</h4>
+
+  <p className="mt-2 text-sm text-gray-400">
+    A farm management system built with React, TypeScript, and Tailwind CSS.
+  </p>
+</div>
+
+        <div className={`${darkMode ? ' ' : ' '} mt-5 w-1/2 border border-gray-700 p-6`} >
+          <h4>shamba records</h4>
+        </div>
+      </div>
     </div>
 
   </div>
