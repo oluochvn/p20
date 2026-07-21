@@ -97,41 +97,28 @@ function App(){
           </p>
         </div>
         </div>
-              <p className="lg:text-center text-lg sm:text-base lg:mt-15 sm:pl-2 sm:pt-5 sm:block  tracking-wide ">
+              <p className="lg:text-center  sm:text-base lg:mt-15 sm:pl-2 sm:pt-5 sm:block  tracking-wide">
                 I believe great software comes from continuous learning and attention to detail. <br />
                 I'm always improving my skills.
               </p>
     </div>
+<div>
+  <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
+<div className="flex items-center justify-between mx-40 gap-8 p-20">
+  
+  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-green-500">
+    <h1 className="text-2xl font-semibold text-center">
+      Shamba Records
+    </h1>
+  </div>
 
-    <div className={`${darkMode ? 'bg-[#00000F]/40 text-white' : 'bg-[#E2DFD0]/10'} transition-colors duration-3500 pl-30 pt-10 h-[520px] sm:pl-15 `}>
-      <h1 className="text-3xl font-bold "><span>.02</span>Projects</h1>
-      <p className="m-7 text-2xl text-green-600">Featured</p>
-
-      <div className=" flex flex-col lg:flex-row gap-5 ml-14 mr-14">
-       <div
-  className={`${
-    darkMode ? "border-gray-700 bg-[#111827]" : "border-gray-300 bg-white"
-  } mt-5 w-1/2 border rounded-xl p-4 shadow-md hover:shadow-lg transition duration-300`}
->
-  <img
-    src="/shamba1.png"
-    alt="Shamba Records"
-    className="w-full h-40 object-cover rounded-lg"
-  />
-
-  <h4 className="mt-4 text-lg font-semibold">Shamba Records</h4>
-
-  <p className="mt-2 text-sm text-gray-400">
-    A farm management system built with React, TypeScript, and Tailwind CSS.
-  </p>
+  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-green-500">
+    <h1 className="text-2xl font-semibold text-center">
+      Pesatrak
+    </h1>
+  </div>
 </div>
-
-        <div className={`${darkMode ? ' ' : ' '} mt-5 w-1/2 border border-gray-700 p-6`} >
-          <h4>shamba records</h4>
-        </div>
-      </div>
-    </div>
-
+</div>
   </div>
   )
 }
