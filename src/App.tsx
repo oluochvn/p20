@@ -71,13 +71,13 @@ function App(){
      <div className="flex items-center space-x-2 mt-4 font-bold hover:text-green-600 "><MapPin /><h2>KENYA</h2></div>
      <div className="mt-5 flex gap-5 ">
         <img src="/github.svg" alt=""
-     className="w-10 h-10 bg-white rounded-full " />
+     className="w-10 h-10 bg-white rounded-full border" />
        <img src="/ln.svg" alt=""
-     className="w-10 h-10 inline-block rounded-full bg-white" />
+     className="w-10 h-10 inline-block rounded-full bg-white border" />
       <img src="/x.svg" alt=""
-     className="w-10 h-10 inline-block rounded-full" />
+     className="w-10 h-10 inline-block rounded-full border" />
       <img src="/insta.svg" alt=""
-     className="w-10 h-10 inline-block bg-white rounded-full" />
+     className="w-10 h-10 inline-block bg-white rounded-full border" />
      </div>
   </div>
 
