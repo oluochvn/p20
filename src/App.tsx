@@ -7,9 +7,7 @@ import { SquareTerminal } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import CIcon from '@coreui/icons-react';
 import { cibReact } from '@coreui/icons';
-import { cibTypescript } from "@coreui/icons";
 import { cibCss3Shiled } from "@coreui/icons";
-import { cibHtml5Shield } from "@coreui/icons";
 
 
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
