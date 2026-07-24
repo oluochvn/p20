@@ -59,7 +59,7 @@ function App(){
       </ul>
     </div>
 
-    <div className="lg:pl-15 lg:pr15 grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center justify-items-center h-[320px] mb-7">
+    <div className="lg:pl-15 lg:pr15 grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center justify-items-center h-[520px] mb-7">
   <div className="">
     <h4 className="text-2xl ml-2 uppercase">hi, i'm</h4>
     <h1 className="text-5xl font-bold uppercase">
