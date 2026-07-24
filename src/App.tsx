@@ -99,14 +99,14 @@ function App(){
             Frontend
           </h2>
           <p className=" leading-relaxed m-3 h-20">
-             <img src="/HTML5.svg"
+             <img src="Skillsntools/HTML5.svg"
               alt="HTML svg" className="w-7 h-7 inline-block" /> HTML    |
-            <img src="/TypeScript.svg"
+            <img src="Skillsntools/TypeScript.svg"
               alt="typescript icon"
               className="w-7 h-7 inline-block" /> Typescript    |
               <CIcon icon={cibReact}       className="w-7 h-7 inline-block" /> React    |
              <CIcon icon={cibCss3Shiled}  className="w-7 h-7 inline-block" /> CSS    |
-            <img src="/Tailwind CSS.svg"
+            <img src="Skillsntools/Tailwind CSS.svg"
               alt="typescript icon"
               className="w-7 h-7 inline-block" />  Tailwind CSS.
           </p>
