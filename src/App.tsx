@@ -69,19 +69,19 @@ function App(){
     <p className="pt-4">Full-stack developer specializing in React, TypeScript and Node.js. I build fast, scalable web applications with modern UI and clean backend architecture.</p>
     
      <div className="flex items-center space-x-2 mt-4 font-bold hover:text-green-600 "><MapPin /><h2>KENYA</h2></div>
-     <div className="mt-5 flex gap-4 ">
+     <div className="mt-5 flex gap-5 ">
         <img src="/github.svg" alt=""
-     className="w-10 h-10 bg-white rounded-full" />
-       <img src="/GitHub.svg" alt=""
-     className="w-10 h-10 inline-block text-white" />
-      <img src="/GitHub.svg" alt=""
-     className="w-10 h-10 inline-block text-white" />
-      <img src="/GitHub.svg" alt=""
-     className="w-10 h-10 inline-block text-white" />
+     className="w-10 h-10 bg-white rounded-full " />
+       <img src="/ln.svg" alt=""
+     className="w-10 h-10 inline-block rounded-full bg-white" />
+      <img src="/x.svg" alt=""
+     className="w-10 h-10 inline-block rounded-full" />
+      <img src="/insta.svg" alt=""
+     className="w-10 h-10 inline-block bg-white rounded-full" />
      </div>
   </div>
 
-  <div className="flex  items-center  lg:pr20 sm:ml-7">
+  <div className="flex  items-center  lg:pr20 sm:ml-7 align-center">
     <img
       className="rounded-full sm:w-70 sm:h-70 lg:w-70 lg:h-70 p-4 bg-white object-cover border-2 border-green-600 transition-transform duration-700 hover:scale-110"
       src="/vbg.jpeg"
