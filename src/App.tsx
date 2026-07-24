@@ -5,6 +5,13 @@ import { Menu } from 'lucide-react';
 import { X } from 'lucide-react'
 import { SquareTerminal } from 'lucide-react';
 import { MapPin } from 'lucide-react';
+import CIcon from '@coreui/icons-react';
+import { cibReact } from '@coreui/icons';
+import { cibTypescript } from "@coreui/icons";
+import { cibCss3Shiled } from "@coreui/icons";
+import { cibHtml5Shield } from "@coreui/icons";
+
+
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { DottedGlowBackground } from "./component/dotted-glow-background";
 //import { BackgroundRippleEffect } from "./component/background-ripple-effect";
@@ -61,9 +68,19 @@ function App(){
       vincent Oluoch
     </h1>
     <h4 className="text-green-600 font-bold text-2xl  ">Fullstack Developer</h4> 
-    <p className="pt-4">I solve design problems, create intuitive user interfaces, and craft engaging web experiences and modern web applications.</p>
+    <p className="pt-4">Full-stack developer specializing in React, TypeScript and Node.js. I build fast, scalable web applications with modern UI and clean backend architecture.</p>
     
      <div className="flex items-center space-x-2 mt-4 font-bold hover:text-green-600 "><MapPin /><h2>KENYA</h2></div>
+     <div className="mt-5 flex gap-4 ">
+        <img src="/github.svg" alt=""
+     className="w-10 h-10 bg-white rounded-full" />
+       <img src="/GitHub.svg" alt=""
+     className="w-10 h-10 inline-block text-white" />
+      <img src="/GitHub.svg" alt=""
+     className="w-10 h-10 inline-block text-white" />
+      <img src="/GitHub.svg" alt=""
+     className="w-10 h-10 inline-block text-white" />
+     </div>
   </div>
 
   <div className="flex  items-center  lg:pr20 sm:ml-7">
@@ -79,21 +96,50 @@ function App(){
         <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
         <div className="lg:flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
 
-        <div  className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
-          <h2 className="mb-3 text-lg font-semibold tracking-wide text-green-600">
+        <div  className={`${darkMode ? 'bg-[#F0F0F0]' : ' bg-[#F0F0F0] '} text-gray-800 mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
+          <h2 className="m-3 text-lg font-semibold tracking-wide text-green-600">
             Frontend
           </h2>
-          <p className=" leading-relaxed">
-            HTML / TypeScript / React / React Native/ CSS / Tailwind CSS.
+          <p className=" leading-relaxed m-3 h-20">
+             <img src="/HTML5.svg"
+              alt="HTML svg" className="w-7 h-7 inline-block" /> HTML    |
+            <img src="/TypeScript.svg"
+              alt="typescript icon"
+              className="w-7 h-7 inline-block" /> Typescript    |
+              <CIcon icon={cibReact}       className="w-7 h-7 inline-block" /> React    |
+             <CIcon icon={cibCss3Shiled}  className="w-7 h-7 inline-block" /> CSS    |
+            <img src="/Tailwind CSS.svg"
+              alt="typescript icon"
+              className="w-7 h-7 inline-block" />  Tailwind CSS.
           </p>
         </div>
-        <div className={`${darkMode ? 'hover:bg-[#F0F0F0] hover:text-gray-800' : 'hover:bg-[#1A1A2E] hover:text-white'} mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
-          <h2 className="mb-3 text-lg font-semibold tracking-wide text-green-600">
+        <div  className={`${darkMode ? 'bg-[#F0F0F0]' : ' bg-[#F0F0F0] '} text-gray-800 mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
+          <h2 className="m-3 text-lg font-semibold tracking-wide text-green-600">
             Backend and Databases
           </h2>
-          <p className=" leading-relaxed">
-            Nodejs/ Express / REST APIs 
-            MongoDB / Supabase / MySQL / Postgre
+          <p className=" leading-relaxed m-3 h-20">
+            <img src="Skillsntools/Node.js.svg"
+             alt="Nodejs svg"
+              className="w-7 h-7 inline-block" /> Nodejs  |  
+            <img src="Skillsntools/Express.svg"
+             alt="Express"
+            className="w-7 h-7 inline-block" />   Express   |
+            <img src="Skillsntools/rest.svg"
+             alt="Nodejs svg"
+              className="w-7 h-7 inline-block" /> REST APIs <br /> 
+            <img src="Skillsntools/MongoDB.svg"
+             alt="MongoDB ICON"
+              className="w-7 h-7 inline-block" />MongoDB   |
+            <img src="Skillsntools/supabase.svg"
+             alt="supabase"
+              className="w-7 h-7 inline-block" />Supabase   |
+            <img src="Skillsntools/mysql.svg"
+             alt="MySQL.svg"
+              className="w-7 h-7 inline-block" />MySQL   | <br />      
+            <img src="Skillsntools/PostgresSQL.svg"
+             alt="PostgresSql"
+              className="w-7 h-7 inline-block" />   
+              Postgress
           </p>
         </div>
         </div>
