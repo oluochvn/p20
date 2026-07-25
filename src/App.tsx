@@ -90,7 +90,7 @@ function App(){
   </div>
 </div>
 
-      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} lg:pt-10 lg:pl-30 sm:block sm:h-full lg:h-[520px] sm:pl-15 sm:pt-5 transition-colors duration-3500`}>
+      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} lg:pt-10 lg:pl-30 sm:block  h-[560px] sm:pl-15 sm:pt-5 transition-colors duration-3500`}>
         <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
         <div className="lg:flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
 
@@ -146,23 +146,9 @@ function App(){
                 I'm always improving my skills.
               </p>
     </div>
-<div>
-  <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
-<div className="flex items-center justify-between mx-40 gap-8 p-20">
-  
-  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7">
-    <h1 className="text-2xl font-semibold text-center">
-      Shamba Records
-    </h1>
-  </div>
+    <div  className={`${darkMode ? ' text-white' : ' bg-[#EAEFEF]'} lg:pt-10 lg:pl-30 sm:block  h-[560px] sm:pl-15 sm:pt-5 transition-colors duration-3500`}>
 
-  <div className="w-1/2 h-[40vh] rounded-2xl border border-gray-700/50 p-7">
-    <h1 className="text-2xl font-semibold text-center">
-      Pesatrak
-    </h1>
-  </div>
-</div>
-</div>
+    </div>
   </div>
   )
 }
