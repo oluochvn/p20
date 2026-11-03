@@ -1,0 +1,6 @@
+
+          <div className="flex text-white gap-4">
+            <img src="/github.svg" className="w-6 h-6" alt="GitHub" />
+            <img src="/LinkedIn.svg" className="w-6 h-6" alt="LinkedIn" />
+            <img src="/email.svg" className="w-6 h-6" alt="Email" />
+           </div>

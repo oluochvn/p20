@@ -1,155 +1,96 @@
-import {useState} from "react";
-import { Sun } from 'lucide-react';
-import { Moon } from 'lucide-react';
-import { Menu } from 'lucide-react';
-import { X } from 'lucide-react'
-import { SquareTerminal } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import CIcon from '@coreui/icons-react';
-import { cibReact } from '@coreui/icons';
-import { cibCss3Shiled } from "@coreui/icons";
-
-
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { DottedGlowBackground } from "./component/dotted-glow-background";
-//import { BackgroundRippleEffect } from "./component/background-ripple-effect";
-
-
-
-function App(){
-  const [darkMode, setDarkMode] = useState(true);
-  const[open,setOpen] = useState(false);
-  
+function App() {
   return (
-    <div className={`${darkMode ? 'bg-gray-950 text-white' : ' text-gray-800'} z-10  min-h-screen  w-full transition-colors duration-3500 font-jetbrains-mono`}>
-    <nav className=" flex justify-between items-center p-4 ml-5 mr-5 h-[100px] top-0 sticky z-10 backdrop-blur-sm">
-      <div className="flex items-center space-x-2">
-        <h1 className=" flex font-caveat text-2xl"><SquareTerminal /></h1>
-        <h1>vnn</h1>
-      </div>
-      <div className=" lg:flex hidden space-x-5 ">
-        <ul className="lg:flex hidden space-x-5">
-          <li><a href="#home" className="hover:text-green-600 hover transition-transform duration-600">Home</a></li>
-          <li><a href="#About" className="hover:text-green-600 hover:transition-transform duration-600">About</a></li>
-          <li><a href="#Projects" className="hover:text-green-600 hover:transition-transform duration-600">Projects</a></li>
-          <li><a href="#Contact" className="hover:text-green-600 hover:transition-transform duration-600">Contact</a></li>
+    <div className="bg-black/95 min-h-screen text-white pt-7">
+      <nav className="sticky top-0 z-50 flex justify-between items-center border-b border-white/10 backdrop-blur-md px-10 py-5">
+        <div>
+          <h1 className="font-bold text-white tracking-wide">
+            vincent oluoch
+            <span className="inline-block w-2 h-2 rounded-full bg-[#FF8F00] ml-1"></span>
+          </h1>
+        </div>
+
+        <ul className="flex gap-8 text-sm text-white/80">
+          <li>
+            <a href="#home" className="hover:text-[#FF8F00] transition-colors">01. Home</a>
+          </li>
+          <li>
+            <a href="#stack" className="hover:text-[#FF8F00] transition-colors">02. Stack</a>
+          </li>
+          <li>
+            <a href="#projects" className="hover:text-[#FF8F00] transition-colors">03. Projects</a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-[#FF8F00] transition-colors">04. Contact</a>
+          </li>
         </ul>
-      </div>
-      <div className="flex items-center">
-         <button className="mr-3 transition-transform duration-1700" onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? <Sun/> : <Moon  />}
-      </button>
-      
-      <div className="flex">
-       <button className=" lg:hidden transition-transform duration-1800"
-  onClick={() => setOpen(!open)}
->
-  {open ? <X className="text-[#16C47F] font-bold" /> : <Menu />}
-</button>
 
-      </div>
-      </div>
-    </nav>
-    <div className={`lg:hidden absolute ${open ? 'block' : 'hidden'} p-4 text-center transition-transform duration-700 top-20 fixed  w-full backdrop-blur-sm`}>
-      <ul className="space-y-2  ">
-        <li><a href="#home" className="hover:text-green-600 hover: pb-7">Home</a></li>
-        <li><a href="#About" className="hover:text-green-600 pb-7">About</a></li>
-        <li><a href="#Projects" className="hover:text-green-600 pb-7">Projects</a></li>
-        <li><a href="#Contact" className="hover:text-green-600 pb-7">Contact</a></li>
-      </ul>
-    </div>
+        <div className="flex items-center gap-3">
+          <a href="/cv.pdf" download className="border border-white/20 text-white px-6 py-2 text-sm rounded-full hover:border-[#FF8F00] hover:text-[#FF8F00] transition">
+            Download CV
+          </a>
 
-    <div className="lg:pl-15 lg:pr15 grid grid-cols-2  ml-15 mr-15 mt-20 text-align-center justify-items-center h-[420px] mb-7">
-  <div className="">
-    <h4 className="text-2xl ml-2 uppercase">hi, i'm</h4>
-    <h1 className="text-5xl font-bold uppercase">
-      vincent Oluoch
-    </h1>
-    <h4 className="text-green-600 font-bold text-2xl  ">Fullstack Developer</h4> 
-    <p className="pt-4">Full-stack developer specializing in React, TypeScript and Node.js. I build fast, scalable web applications with modern UI and clean backend architecture.</p>
-    
-     <div className="flex items-center space-x-2 mt-4 font-bold hover:text-green-600 "><MapPin /><h2>KENYA</h2></div>
-     <div className="mt-5 flex gap-5 ">
-        <img src="/github.svg" alt=""
-     className="w-10 h-10 bg-white rounded-full border" />
-       <img src="/ln.svg" alt=""
-     className="w-10 h-10 inline-block rounded-full bg-white border" />
-      <img src="/x.svg" alt=""
-     className="w-10 h-10 inline-block rounded-full border" />
-      <img src="/insta.svg" alt=""
-     className="w-10 h-10 inline-block bg-white rounded-full border" />
-     </div>
-  </div>
+          <div className="flex items-center gap-2 border border-white/10 px-4 py-2 rounded-full text-sm text-white/70">
+            <span className="w-2 h-2 rounded-full bg-[#FF8F00]"></span>
+            Available for projects
+          </div>
+        </div>
+      </nav>
 
-  <div className="flex  items-center  lg:pr20 sm:ml-7 align-center">
-    <img
-      className="rounded-full sm:w-70 sm:h-70 lg:w-70 lg:h-70 p-4 bg-white object-cover border-2 border-green-600 transition-transform duration-700 hover:scale-110"
-      src="/vbg.jpeg"
-      alt="Vincent Oluoch"
-    />
-  </div>
-</div>
-
-      <div  className={`${darkMode ? 'bg-[#00000F] text-white' : ' bg-[#EAEFEF]'} lg:pt-10 lg:pl-30 sm:block  h-[560px] sm:pl-15 sm:pt-5 transition-colors duration-3500`}>
-        <h1 className="text-3xl font-bold "><span>.01</span> Skills & Tools</h1>
-        <div className="lg:flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
-
-        <div  className={`${darkMode ? 'bg-[#F0F0F0]' : ' bg-[#F0F0F0] '} text-gray-800 mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
-          <h2 className="m-3 text-lg font-semibold tracking-wide text-green-600">
-            Frontend
-          </h2>
-          <p className=" leading-relaxed m-3 h-20">
-             <img src="Skillsntools/HTML5.svg"
-              alt="HTML svg" className="w-7 h-7 inline-block" /> HTML    |
-            <img src="Skillsntools/TypeScript.svg"
-              alt="typescript icon"
-              className="w-7 h-7 inline-block" /> Typescript    |
-              <CIcon icon={cibReact}       className="w-7 h-7 inline-block" /> React    |
-             <CIcon icon={cibCss3Shiled}  className="w-7 h-7 inline-block" /> CSS    |
-            <img src="Skillsntools/Tailwind CSS.svg"
-              alt="typescript icon"
-              className="w-7 h-7 inline-block" />  Tailwind CSS.
+      <section id="home" className="max-w-7xl mx-auto px-10 py-32 flex items-center justify-between gap-16">
+        <div className="flex-1">
+          <p className="text-[#FF8F00] tracking-[4px] text-xs mb-8">
+            HELLO, I'M VINCENT
           </p>
-        </div>
-        <div  className={`${darkMode ? 'bg-[#F0F0F0]' : ' bg-[#F0F0F0] '} text-gray-800 mt-5 w-full max-w-md rounded-2xl border border-gray-700 p-6`} >
-          <h2 className="m-3 text-lg font-semibold tracking-wide text-green-600">
-            Backend and Databases
-          </h2>
-          <p className=" leading-relaxed m-3 h-20">
-            <img src="Skillsntools/Node.js.svg"
-             alt="Nodejs svg"
-              className="w-7 h-7 inline-block" /> Nodejs  |  
-            <img src="Skillsntools/Express.svg"
-             alt="Express"
-            className="w-7 h-7 inline-block" />   Express   |
-            <img src="Skillsntools/rest.svg"
-             alt="Nodejs svg"
-              className="w-7 h-7 inline-block" /> REST APIs <br /> 
-            <img src="Skillsntools/MongoDB.svg"
-             alt="MongoDB ICON"
-              className="w-7 h-7 inline-block" />MongoDB   |
-            <img src="Skillsntools/supabase.svg"
-             alt="supabase"
-              className="w-7 h-7 inline-block" />Supabase   |
-            <img src="Skillsntools/mysql.svg"
-             alt="MySQL.svg"
-              className="w-7 h-7 inline-block" />MySQL   | <br />      
-            <img src="Skillsntools/PostgresSQL.svg"
-             alt="PostgresSql"
-              className="w-7 h-7 inline-block" />   
-              Postgress
-          </p>
-        </div>
-        </div>
-              <p className="lg:text-center  sm:text-base lg:mt-15 sm:pl-2 sm:pt-5 sm:block  tracking-wide">
-                I believe great software comes from continuous learning and attention to detail. <br />
-                I'm always improving my skills.
-              </p>
-    </div>
-    <div  className={`${darkMode ? ' text-white' : ' bg-[#EAEFEF]'} lg:pt-10 lg:pl-30 sm:block  h-[560px] sm:pl-15 sm:pt-5 transition-colors duration-3500`}>
 
+          <h1 className="text-7xl font-semibold leading-[1.1] tracking-tight">
+            Full-Stack
+            <br />
+            Developer<span className="text-[#FF8F00]">.</span>
+          </h1>
+
+          <p className="text-white/40 mt-8 text-base max-w-lg leading-8">
+            I build modern web applications, combining thoughtful design with functional and scalable solutions.
+          </p>
+
+          <div className="flex items-center gap-4 mt-10">
+            <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="border border-white/20 p-3 rounded-full hover:border-[#FF8F00] hover:bg-white/5 transition">
+              <img src="/github.svg" alt="GitHub" className="w-5 h-5 invert" />
+            </a>
+
+            <a href="mailto:theevinceke@gmail.com" aria-label="Email" className="border border-white/20 p-3 rounded-full hover:border-[#FF8F00] hover:bg-white/5 transition">
+              <img src="/email.svg" alt="Email" className="w-5 h-5 invert" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="border border-white/20 p-3 rounded-full hover:border-[#FF8F00] hover:bg-white/5 transition">
+              <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5 invert" />
+            </a>
+          </div>
+        </div>
+
+        <div className="flex-1 flex justify-center items-center">
+          <div className="relative">
+            <div className="absolute inset-0 rounded-full border border-[#FF8F00]/20 scale-110"></div>
+            <img src="/vbg.jpeg" alt="Vincent Oluoch" className="w-72 h-72 object-cover rounded-full border border-white/10 grayscale-[20%]" />
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" className="max-w-7xl mx-auto px-10 py-20 border-t border-white/10">
+        <h2 className="text-2xl font-semibold">Tech Stack<span className="text-[#FF8F00]">.</span></h2>
+      </section>
+
+      <section id="projects" className="max-w-7xl mx-auto px-10 py-20 border-t border-white/10">
+        <h2 className="text-2xl font-semibold">Selected Projects<span className="text-[#FF8F00]">.</span></h2>
+      </section>
+
+      <section id="contact" className="max-w-7xl mx-auto px-10 py-20 border-t border-white/10">
+        <h2 className="text-2xl font-semibold">Get In Touch<span className="text-[#FF8F00]">.</span></h2>
+        <a href="mailto:theevinceke@gmail.com" className="text-white/60 hover:text-[#FF8F00] transition mt-4 inline-block">
+          theevinceke@gmail.com
+        </a>
+      </section>
     </div>
-  </div>
-  )
+  );
 }
+
 export default App;
