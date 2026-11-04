@@ -1,0 +1,7 @@
+{
+  "format": "galactrex.ui/1",
+  "dir": "src/components/galactrex",
+  "alias": "p20",
+  "css": "src/index.css",
+  "registry": "https://api.galactrex.com/v1/ui"
+}

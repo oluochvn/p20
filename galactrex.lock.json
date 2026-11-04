@@ -1,0 +1,29 @@
+{
+  "format": "galactrex.ui/1",
+  "items": {
+    "theme": {
+      "version": "742ff68c578a",
+      "files": {
+        "src/index.css": "caa7c815a8ab4c50a0da329822672367666d5997ed9b60164198edbcf2a523ff"
+      }
+    },
+    "motion": {
+      "version": "24c5fe86cc7c",
+      "files": {
+        "src/components/galactrex/motion/cx.ts": "19388eee7745fb692d064df34aeb7c3ef92460dc62f99cac1da1e0bf10fc7b32",
+        "src/components/galactrex/motion/springs.ts": "e3ef180266635784e418d16000e5072a350b5af492e9131638a64cbdc2abdfe8",
+        "src/components/galactrex/motion/use-reduced-motion.ts": "d0a3905de9c6aa797b8925082f06bfa89867a735f1cebd9288639201a16dda4f",
+        "src/components/galactrex/motion/use-fine-pointer.ts": "b91e524080bfd44a1ab31545cf56aada518176e1e1db7583519a7ff8e2333d26",
+        "src/components/galactrex/motion/use-element-size.ts": "f96d3a3849f200403c699957456b6fe38f59425e255360d2a0e74aaf2be519f5",
+        "src/components/galactrex/motion/use-pointer.ts": "cc7ae95ed7b55c2a5d50ceebd4e8e9438d1ddd2394e70f399fde012aa81a1f3d",
+        "src/components/galactrex/motion/use-magnetic.ts": "1660a7acac908c89c109681f6ac089ef4e2e8f01dcb2d9cbde4b7de10dbbeb81",
+        "src/components/galactrex/motion/use-visible.ts": "8a525340c4f0eba6859c704c11213b375777975a0c6ec0eb550cb60931db5dbd",
+        "src/components/galactrex/motion/button-base.ts": "681f1f1fe98edd67da63705342996b83efde77335e39be6b8198dbfcad2d26f3",
+        "src/components/galactrex/motion/split.ts": "0299b01875e98027b7802431bbe8152ec9499d4138ed4b1aa8d95f7ec02ef83a",
+        "src/components/galactrex/motion/use-trigger.ts": "aa5ae097ef64390c18eb0615d6e85e810f966c29f5345df4233c53cdbdb8178a",
+        "src/components/galactrex/motion/ring.ts": "0662caf4a67253b61b08ef501f2df323e1bf8394da7b1d2ae43bbb58df1d6635",
+        "src/components/galactrex/motion/use-canvas.ts": "cc12bb44417bf1a81401b3af485bf89121623e4626af8bd87b1a017897a370dc"
+      }
+    }
+  }
+}

@@ -1,1 +1,77 @@
 @import "tailwindcss";
+
+/* galactrex-ui:start */
+:root {
+  --gxui-bg: #fafafa;
+  --gxui-surface: #ffffff;
+  --gxui-raised: #f2f2f3;
+  --gxui-ink: #0b0b0d;
+  --gxui-muted: #66666e;
+  --gxui-line: #e2e2e6;
+  --gxui-glow: #0b0b0d;
+  --gxui-accent: #0b0b0d;
+  --gxui-on-accent: #fafafa;
+  --gxui-spectrum-1: #0d9488;
+  --gxui-spectrum-2: #2563eb;
+  --gxui-spectrum-3: #9333ea;
+  --gxui-spectrum-4: #d97706;
+}
+.dark {
+  --gxui-bg: #08080a;
+  --gxui-surface: #0f0f12;
+  --gxui-raised: #17171b;
+  --gxui-ink: #f4f4f5;
+  --gxui-muted: #8b8b94;
+  --gxui-line: #25252b;
+  --gxui-glow: #ffffff;
+  --gxui-accent: #f4f4f5;
+  --gxui-on-accent: #08080a;
+  --gxui-spectrum-1: #6ee7b7;
+  --gxui-spectrum-2: #60a5fa;
+  --gxui-spectrum-3: #c084fc;
+  --gxui-spectrum-4: #ffb347;
+}
+@theme inline {
+  --color-gxui-bg: var(--gxui-bg);
+  --color-gxui-surface: var(--gxui-surface);
+  --color-gxui-raised: var(--gxui-raised);
+  --color-gxui-ink: var(--gxui-ink);
+  --color-gxui-muted: var(--gxui-muted);
+  --color-gxui-line: var(--gxui-line);
+  --color-gxui-glow: var(--gxui-glow);
+  --color-gxui-accent: var(--gxui-accent);
+  --color-gxui-on-accent: var(--gxui-on-accent);
+  --color-gxui-spectrum-1: var(--gxui-spectrum-1);
+  --color-gxui-spectrum-2: var(--gxui-spectrum-2);
+  --color-gxui-spectrum-3: var(--gxui-spectrum-3);
+  --color-gxui-spectrum-4: var(--gxui-spectrum-4);
+}
+@keyframes gxui-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+
+@keyframes gxui-gradient-flow {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@keyframes gxui-mask-drift {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@keyframes gxui-grain {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+  100% { transform: translate(0, 0); }
+}
+/* galactrex-ui:end */
