@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div className="bg-black min-h-screen text-white px-0 pt-0 pb-0 sm:px-6 sm:pt-5 sm:pb-5 md:px-12 lg:px-30 lg:pt-7 lg:pb-6">
-      <div className="sm:border-l sm:border-r border-white/10 min-h-screen overflow-x-hidden">
+      <div className="sm:border-l sm:border-r border-white/10 min-h-screen overflow-x-clip">
 
-        <nav className="sticky top-0 z-50 border-b border-white/10 mt-5 bg-black/20 backdrop-blur-md">
+        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
           <div className="flex justify-between items-center px-5 sm:px-10 py-4 md:py-5">
             <h1 className="font-bold text-white tracking-wide">
               vincent oluoch
