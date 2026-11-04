@@ -92,7 +92,7 @@ function App() {
               </a>
 
               <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40 transition">
-                <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
+                <img src="/linkedin1.svg" alt="LinkedIn" className="w-5 h-5" />
               </a>
             </div>
           </div>
