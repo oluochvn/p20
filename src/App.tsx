@@ -6,29 +6,29 @@ function App() {
   const close = () => setOpen(false);
 
   return (
-    <div className="bg-black min-h-screen text-white px-0 pt-0 pb-0 sm:px-6 sm:pt-5 sm:pb-5 md:px-12 lg:px-30 lg:pt-7 lg:pb-6">
-      <div className="sm:border-l sm:border-r border-white/10 min-h-screen overflow-x-clip">
+    <div className="bg-black min-h-screen text-white px-0 pt-0 pb-0">
+      <div className="min-h-screen border-x border-white/10 overflow-x-clip">
 
         <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
           <div className="flex justify-between items-center px-5 sm:px-10 py-4 md:py-5">
             <h1 className="font-bold text-white tracking-wide">
               vincent oluoch
-              <span className="inline-block w-2 h-2 rounded-full bg-[#FF8F00] ml-1"></span>
+              <span className="inline-block w-2 h-2 rounded-full bg-[#4A4A4A] ml-1"></span>
             </h1>
 
             <ul className="hidden md:flex gap-8 text-sm text-white/80">
-              <li><a href="#home" className="hover:text-[#FF8F00] transition-colors">01. Home</a></li>
-              <li><a href="#about" className="hover:text-[#FF8F00] transition-colors">02. About</a></li>
-              <li><a href="#projects" className="hover:text-[#FF8F00] transition-colors">03. Projects</a></li>
-              <li><a href="#contact" className="hover:text-[#FF8F00] transition-colors">04. Contact</a></li>
+              <li><a href="#home" className="hover:text-[#FF8F04A4A4A] transition-colors">01. Home</a></li>
+              <li><a href="#about" className="hover:text-[#4A4A4A] transition-colors">02. About</a></li>
+              <li><a href="#projects" className="hover:text-[[#4A4A4A]] transition-colors">03. Projects</a></li>
+              <li><a href="#contact" className="hover:text-[#[#4A4A4A]] transition-colors">04. Contact</a></li>
             </ul>
 
             <div className="hidden lg:flex items-center gap-3">
-              <a href="/cv.pdf" download className="border border-white/20 text-white px-6 py-2 text-sm rounded-full hover:border-[#FF8F00] hover:text-[#FF8F00] transition">
+              <a href="/cv.pdf" download className="border  bg-white border-white/20 text-black px-6 py-2 text-sm rounded-full hover:bg-white/75 hover:border-[#4A4A4A] hover:text-[#FF8F04A4A4A] transition">
                 Download CV
               </a>
               <div className="flex items-center gap-2 border border-white/10 px-4 py-2 rounded-full text-sm text-white/70">
-                <span className="w-2 h-2 rounded-full bg-[#FF8F00]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#B1CCB1]"></span>
                 Available for projects
               </div>
             </div>
@@ -48,17 +48,17 @@ function App() {
           <div id="mobile-menu" className={`md:hidden grid transition-all duration-300 ${open ? "grid-rows-[1fr] border-t border-white/10" : "grid-rows-[0fr]"}`}>
             <div className="overflow-hidden">
               <ul className="px-5 sm:px-10 py-3 text-base text-white/80">
-                <li className="border-b border-white/5"><a href="#home" onClick={close} className="block py-3.5 hover:text-[#FF8F00] transition-colors">01. Home</a></li>
-                <li className="border-b border-white/5"><a href="#about" onClick={close} className="block py-3.5 hover:text-[#FF8F00] transition-colors">02. About</a></li>
-                <li className="border-b border-white/5"><a href="#projects" onClick={close} className="block py-3.5 hover:text-[#FF8F00] transition-colors">03. Projects</a></li>
-                <li><a href="#contact" onClick={close} className="block py-3.5 hover:text-[#FF8F00] transition-colors">04. Contact</a></li>
+                <li className="border-b border-white/5"><a href="#home" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">01. Home</a></li>
+                <li className="border-b border-white/5"><a href="#about" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">02. About</a></li>
+                <li className="border-b border-white/5"><a href="#projects" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">03. Projects</a></li>
+                <li><a href="#contact" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">04. Contact</a></li>
               </ul>
               <div className="px-5 sm:px-10 pb-6 flex flex-wrap items-center gap-3">
-                <a href="/cv.pdf" download onClick={close} className="border border-white/20 text-white px-5 py-2.5 text-sm rounded-full hover:border-[#FF8F00] hover:text-[#FF8F00] transition">
+                <a href="/cv.pdf" download onClick={close} className="border border-white/20 text-white px-5 py-2.5 text-sm rounded-full hover:border-[#4A4A4A] hover:text-[#4A4A4A] transition">
                   Download CV
                 </a>
                 <div className="flex items-center gap-2 border border-white/10 px-4 py-2.5 rounded-full text-sm text-white/70">
-                  <span className="w-2 h-2 rounded-full bg-[#FF8F00]"></span>
+                  <span className="w-2 h-2 rounded-full bg-[#4A4A4A]"></span>
                   Available for projects
                 </div>
               </div>
@@ -68,28 +68,26 @@ function App() {
 
         <section id="home" className="scroll-mt-24 max-w-7xl mx-auto px-5 sm:px-10 pt-12 pb-16 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
           <div className="flex-1 w-full">
-            <p className="text-[#FF8F00] tracking-[3px] md:tracking-[4px] text-xs mb-6 md:mb-8">
+            <p className="text-[#DBDBDB] tracking-[3px] md:tracking-[4px] text-xs mb-6 md:mb-8">
               HELLO, I'M VINCENT
             </p>
 
-            <h1 className="text-[2.75rem] sm:text-6xl md:text-7xl font-semibold leading-[1.08] tracking-tight">
+            <h1 className="text-[2.75rem] text-white/80 sm:text-6xl md:text-7xl font-semibold leading-[1.08] tracking-tight">
               Full-Stack
               <br />
               Developer
             </h1>
-
-
 
             <p className="text-white/40 mt-6 md:mt-8 text-[15px] md:text-base max-w-lg leading-7 md:leading-8">
               I build modern web applications, combining thoughtful design with functional and scalable solutions.
             </p>
 
             <div className="flex items-center gap-4 mt-8 md:mt-10">
-              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="border border-white/20 p-2.5 md:p-2 bg-black hover:border-white/40  rounded-full">
+              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="border border-white/20 p-2.5 md:p-2 bg-black hover:border-white/40 rounded-full">
                 <img src="/github.svg" alt="GitHub" className="w-5 h-5 invert" />
               </a>
 
-              <a href="mailto:theevinceke@gmail.com" aria-label="Email" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40  transition">
+              <a href="mailto:theevinceke@gmail.com" aria-label="Email" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40 transition">
                 <img src="/email.svg" alt="Email" className="w-5 h-5 invert" />
               </a>
 
@@ -109,17 +107,17 @@ function App() {
 
         <section id="about" className="scroll-mt-24 max-w-7xl mx-auto px-5 sm:px-10 py-16 md:py-28 border-t border-white/10">
           <div className="flex items-center gap-3 mb-10 md:mb-14">
-            <span className="text-[#FF8F00] text-xs tracking-[3px] md:tracking-[4px]">01 / ABOUT ME</span>
-            <div className="h-px w-12 md:w-16 bg-[#FF8F00]/40"></div>
+            <span className="text-[#DBDBDB] text-xs tracking-[3px] md:tracking-[4px]">01 / ABOUT ME</span>
+            <div className="h-px w-12 md:w-16 bg-[#DBDBDB]/40"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <h2 className="text-[2rem] sm:text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
+              <h2 className="text-[2rem] sm:text-4xl text-[#4A4A4A] md:text-5xl font-semibold tracking-tight leading-tight">
                 Turning ideas into
-                <span className="text-white/40 font-playful text-5xl sm:text-6xl"> digital</span>
+                <span className="text-white font-playful text-5xl sm:text-6xl"> digital</span>
                 <br />
-                <span className="text-[#FF8F00] font-playful text-5xl sm:text-6xl">experiences.</span>
+                <span className="text-white font-playful text-5xl sm:text-6xl">experiences.</span>
               </h2>
 
               <p className="text-white/50 text-[15px] md:text-base leading-7 md:leading-8 mt-6 md:mt-8 max-w-xl">
@@ -137,7 +135,7 @@ function App() {
 
               <div className="flex flex-wrap gap-2.5 md:gap-3 mt-7 md:mt-8">
                 {["Problem Solving", "Clean Code", "Continuous Learning"].map((item) => (
-                  <span key={item} className="border border-white/10 bg-white/[0.03] px-4 py-2 rounded-full text-xs text-white/60 hover:border-[#FF8F00]/50 hover:text-[#FF8F00] transition">
+                  <span key={item} className="border border-white/10 bg-white/[0.03] px-4 py-2 rounded-full text-xs text-white/60 hover:border-[#4A4A4A]/50 hover:text-[#4A4A4A] transition">
                     {item}
                   </span>
                 ))}
@@ -148,7 +146,7 @@ function App() {
               <div className="relative border border-white/10 bg-white/[0.025] rounded-2xl p-6 sm:p-8">
                 <div className="flex justify-between items-center border-b border-white/10 pb-5 md:pb-6">
                   <span className="text-xs tracking-widest text-white/40">PROFILE OVERVIEW</span>
-                  <span className=" text-xs">01.001</span>
+                  <span className="text-xs">01.001</span>
                 </div>
 
                 <div className="py-6 md:py-8">
@@ -190,21 +188,21 @@ function App() {
 
         <section id="projects" className="scroll-mt-24 max-w-7xl mx-auto px-5 sm:px-10 py-16 md:py-20 border-t border-white/10">
           <div className="flex items-center gap-3 mb-8 md:mb-10">
-            <span className="text-[#FF8F00] text-xs tracking-[3px] md:tracking-[4px]">02 / MY WORK</span>
-            <div className="h-px w-12 bg-[#FF8F00]/40"></div>
+            <span className="text-[#DBDBDB] text-xs tracking-[3px] md:tracking-[4px]">02 / MY WORK</span>
+            <div className="h-px w-12 bg-[#DBDBDB]/40"></div>
           </div>
 
           <div className="flex justify-between items-end gap-4 mb-8 md:mb-10">
             <div>
               <h2 className="text-[1.75rem] sm:text-3xl md:text-4xl font-semibold tracking-tight">
-                Selected Projects<span className="text-[#FF8F00]">.</span>
+                Selected Projects<span className="text-[#4A4A4A]">.</span>
               </h2>
               <p className="text-white/40 text-sm mt-3">
                 A few things I've been <span className="font-playful text-white text-lg">building.</span>
               </p>
             </div>
 
-            <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="shrink-0 py-2 text-xs text-white/50 hover:text-[#FF8F00] transition">
+            <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="shrink-0 py-2 text-xs text-white/50 hover:text-[#4A4A4A] transition">
               GitHub ↗
             </a>
           </div>
@@ -212,11 +210,9 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             <div className="group border border-white/10 bg-white/[0.02] rounded-xl overflow-hidden hover:border-white/20 transition">
               <div className="relative h-32 md:h-36 bg-[#101010] flex items-center justify-center">
-                <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">
-                  pesatrak
-                </p>
+                <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">pesatrak</p>
                 <span className="absolute top-4 left-4 text-[10px] text-white/30">01 / 02</span>
-                <span className="absolute top-4 right-4 text-[10px] ">FINTECH</span>
+                <span className="absolute top-4 right-4 text-[10px]">FINTECH</span>
               </div>
 
               <div className="p-5">
@@ -241,11 +237,9 @@ function App() {
 
             <div className="group border border-white/10 bg-white/[0.02] rounded-xl overflow-hidden hover:border-white/20 transition">
               <div className="relative h-32 md:h-36 bg-[#101010] flex items-center justify-center">
-                <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">
-                  smartseason
-                </p>
+                <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">smartseason</p>
                 <span className="absolute top-4 left-4 text-[10px] text-white/30">02 / 02</span>
-                <span className="absolute top-4 right-4 text-[10px] ">WEB APP</span>
+                <span className="absolute top-4 right-4 text-[10px]">WEB APP</span>
               </div>
 
               <div className="p-5">
@@ -272,8 +266,8 @@ function App() {
 
         <section id="contact" className="scroll-mt-24 max-w-7xl mx-auto px-5 sm:px-10 py-16 md:py-28 border-t border-white/10">
           <div className="flex items-center gap-3 mb-10 md:mb-14">
-            <span className="text-[#FF8F00] text-xs tracking-[3px] md:tracking-[4px]">03 / GET IN TOUCH</span>
-            <div className="h-px w-12 md:w-16 bg-[#FF8F00]/40"></div>
+            <span className="text-[#DBDBDB] text-xs tracking-[3px] md:tracking-[4px]">03 / GET IN TOUCH</span>
+            <div className="h-px w-12 md:w-16 bg-[#DBDBDB]/40"></div>
           </div>
 
           <div className="max-w-3xl mx-auto text-center">
@@ -281,9 +275,9 @@ function App() {
               HAVE A PROJECT IN MIND?
             </p>
 
-            <h2 className="text-[2.25rem] sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
+            <h2 className="text-[2.25rem] text-[#4A4A4A] sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
               Let's build something
-              <span className="text-[#FF8F00] font-playful text-5xl sm:text-6xl md:text-7xl font-medium"> meaningful.</span>
+              <span className="text-white font-playful text-5xl sm:text-6xl md:text-7xl font-medium"> meaningful.</span>
             </h2>
 
             <p className="text-white/40 text-sm md:text-base leading-7 md:leading-8 max-w-xl mx-auto mt-6 md:mt-7">
@@ -297,9 +291,9 @@ function App() {
             </a>
 
             <div className="flex justify-center items-center gap-8 mt-12 md:mt-14">
-              <a href="mailto:theevinceke@gmail.com" className="py-2 text-xs text-white/40 hover:text-[#FF8F00] transition">Email</a>
-              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-[#FF8F00] transition">GitHub</a>
-              <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-[#FF8F00] transition">LinkedIn</a>
+              <a href="mailto:theevinceke@gmail.com" className="py-2 text-xs text-white/40 hover:text-[#4A4A4A] transition">Email</a>
+              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-[#4A4A4A] transition">GitHub</a>
+              <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-[#4A4A4A] transition">LinkedIn</a>
             </div>
           </div>
 
