@@ -6,14 +6,14 @@ function App() {
   const close = () => setOpen(false);
 
   return (
-    <div className="bg-black min-h-screen text-white px-0 pt-0 pb-0">
+    <div className="bg-black/97 min-h-screen text-white px-0 pt-0 pb-0">
       <div className="min-h-screen border-x border-white/10 overflow-x-clip">
 
-        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
+        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/5 backdrop-blur-md">
           <div className="flex justify-between items-center px-5 sm:px-10 py-4 md:py-5">
-            <h1 className="font-bold text-white tracking-wide">
+            <h1 className="font-bold text-2xl text-white tracking-wide">
               vincent oluoch
-              <span className="inline-block w-2 h-2 rounded-full bg-[#4A4A4A] ml-1"></span>
+              <span className="inline-block w-2 h-2  bg-[#4A4A4A] ml-1"></span>
             </h1>
 
             <ul className="hidden md:flex gap-8 text-sm text-white/80">
@@ -28,7 +28,7 @@ function App() {
                 Download CV
               </a>
               <div className="flex items-center gap-2 border border-white/10 px-4 py-2 rounded-full text-sm text-white/70">
-                <span className="w-2 h-2 rounded-full bg-[#B1CCB1]"></span>
+                <span className="w-2 h-2 rounded bg-[#B1CCB1]"></span>
                 Available for projects
               </div>
             </div>
@@ -135,7 +135,7 @@ function App() {
 
               <div className="flex flex-wrap gap-2.5 md:gap-3 mt-7 md:mt-8">
                 {["Problem Solving", "Clean Code", "Continuous Learning"].map((item) => (
-                  <span key={item} className="border border-white/10 bg-white/[0.03] px-4 py-2 rounded-full text-xs text-white/60 hover:border-[#4A4A4A]/50 hover:text-[#4A4A4A] transition">
+                  <span key={item} className="border border-white/10 bg-white/[0.03] px-4 py-2 rounded text-xs text-white/60 hover:border-[#4A4A4A]/50 hover:text-[#4A4A4A] transition">
                     {item}
                   </span>
                 ))}
@@ -143,7 +143,7 @@ function App() {
             </div>
 
             <div className="relative">
-              <div className="relative border border-white/10 bg-white/[0.025] rounded-2xl p-6 sm:p-8">
+              <div className="relative border border-white/10 bg-white/[0.025] rounded p-6 sm:p-8">
                 <div className="flex justify-between items-center border-b border-white/10 pb-5 md:pb-6">
                   <span className="text-xs tracking-widest text-white/40">PROFILE OVERVIEW</span>
                   <span className="text-xs">01.001</span>
@@ -208,7 +208,7 @@ function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-            <div className="group border border-white/10 bg-white/[0.02] rounded-xl overflow-hidden hover:border-white/20 transition">
+            <div className="group border border-white/10 bg-white/[0.02] rounded overflow-hidden hover:border-white/20 transition">
               <div className="relative h-32 md:h-36 bg-[#101010] flex items-center justify-center">
                 <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">pesatrak</p>
                 <span className="absolute top-4 left-4 text-[10px] text-white/30">01 / 02</span>
@@ -224,7 +224,7 @@ function App() {
 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {["React", "Node.js", "MongoDB", "Tailwind"].map((tech) => (
-                    <span key={tech} className="text-[10px] text-white/50 border border-white/10 rounded-full px-3 py-1">{tech}</span>
+                    <span key={tech} className="text-[10px] text-white/50 border border-white/10 rounded px-3 py-1">{tech}</span>
                   ))}
                 </div>
 
@@ -235,7 +235,7 @@ function App() {
               </div>
             </div>
 
-            <div className="group border border-white/10 bg-white/[0.02] rounded-xl overflow-hidden hover:border-white/20 transition">
+            <div className="group border border-white/10 bg-white/[0.02] rounded overflow-hidden hover:border-white/20 transition">
               <div className="relative h-32 md:h-36 bg-[#101010] flex items-center justify-center">
                 <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">smartseason</p>
                 <span className="absolute top-4 left-4 text-[10px] text-white/30">02 / 02</span>
@@ -251,7 +251,7 @@ function App() {
 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {["React", "Supabase", "JavaScript", "Tailwind"].map((tech) => (
-                    <span key={tech} className="text-[10px] text-white/50 border border-white/10 rounded-full px-3 py-1">{tech}</span>
+                    <span key={tech} className="text-[10px] text-white/50 border border-white/10 rounded px-3 py-1">{tech}</span>
                   ))}
                 </div>
 
@@ -285,7 +285,7 @@ function App() {
               and opportunities to contribute to interesting work.
             </p>
 
-            <a href="mailto:theevinceke@gmail.com" className="inline-flex items-center justify-center gap-3 bg-black text-white px-7 py-3.5 md:py-3 rounded-full border border-white/40 text-sm font-medium mt-9 md:mt-10 hover:bg-white/10 transition duration-300">
+            <a href="mailto:theevinceke@gmail.com" className="inline-flex items-center justify-center gap-3 bg-white/[0.02] text-white px-7 py-3.5 md:py-3 rounded border border-white/20 text-sm font-medium mt-9 md:mt-10 hover:bg-white/10 transition duration-300">
               Let's Talk
               <img src="/email2.svg" alt="email" className="w-5 h-5 invert" />
             </a>
