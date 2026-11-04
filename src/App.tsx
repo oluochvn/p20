@@ -6,7 +6,7 @@ function App() {
   const close = () => setOpen(false);
 
   return (
-    <div className="bg-black/95 min-h-screen text-white px-0 pt-0 pb-0 sm:px-6 sm:pt-5 sm:pb-5 md:px-12 lg:px-30 lg:pt-7 lg:pb-6">
+    <div className="bg-black min-h-screen text-white px-0 pt-0 pb-0 sm:px-6 sm:pt-5 sm:pb-5 md:px-12 lg:px-30 lg:pt-7 lg:pb-6">
       <div className="sm:border-l sm:border-r border-white/10 min-h-screen overflow-x-hidden">
 
         <nav className="sticky top-0 z-50 border-b border-white/10 mt-5 bg-black/20 backdrop-blur-md">
@@ -78,12 +78,7 @@ function App() {
               Developer<span className="text-[#FF8F00]">.</span>
             </h1>
 
-            <div className="mt-5 flex gap-3 items-center">
-              <img src="/location.svg" alt="Location" className="w-10 h-10" />
-              <h1 className="font-semibold text-4xl sm:text-5xl text-[#FF8F00]/90 mt-1">
-                Kenya.
-              </h1>
-            </div>
+
 
             <p className="text-white/40 mt-6 md:mt-8 text-[15px] md:text-base max-w-lg leading-7 md:leading-8">
               I build modern web applications, combining thoughtful design with functional and scalable solutions.
@@ -153,7 +148,7 @@ function App() {
               <div className="relative border border-white/10 bg-white/[0.025] rounded-2xl p-6 sm:p-8">
                 <div className="flex justify-between items-center border-b border-white/10 pb-5 md:pb-6">
                   <span className="text-xs tracking-widest text-white/40">PROFILE OVERVIEW</span>
-                  <span className="text-[#FF8F00] text-xs">01.001</span>
+                  <span className=" text-xs">01.001</span>
                 </div>
 
                 <div className="py-6 md:py-8">
@@ -205,7 +200,7 @@ function App() {
                 Selected Projects<span className="text-[#FF8F00]">.</span>
               </h2>
               <p className="text-white/40 text-sm mt-3">
-                A few things I've been <span className="font-playful text-[#FF8F00] text-lg">building.</span>
+                A few things I've been <span className="font-playful text-white text-lg">building.</span>
               </p>
             </div>
 
@@ -218,10 +213,10 @@ function App() {
             <div className="group border border-white/10 bg-white/[0.02] rounded-xl overflow-hidden hover:border-white/20 transition">
               <div className="relative h-32 md:h-36 bg-[#101010] flex items-center justify-center">
                 <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">
-                  pesa<span className="text-[#FF8F00]">trak</span>
+                  pesatrak
                 </p>
                 <span className="absolute top-4 left-4 text-[10px] text-white/30">01 / 02</span>
-                <span className="absolute top-4 right-4 text-[10px] text-[#FF8F00]">FINTECH</span>
+                <span className="absolute top-4 right-4 text-[10px] ">FINTECH</span>
               </div>
 
               <div className="p-5">
@@ -247,10 +242,10 @@ function App() {
             <div className="group border border-white/10 bg-white/[0.02] rounded-xl overflow-hidden hover:border-white/20 transition">
               <div className="relative h-32 md:h-36 bg-[#101010] flex items-center justify-center">
                 <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">
-                  smart<span className="text-[#FF8F00]">season</span>
+                  smartseason
                 </p>
                 <span className="absolute top-4 left-4 text-[10px] text-white/30">02 / 02</span>
-                <span className="absolute top-4 right-4 text-[10px] text-[#FF8F00]">WEB APP</span>
+                <span className="absolute top-4 right-4 text-[10px] ">WEB APP</span>
               </div>
 
               <div className="p-5">
@@ -282,7 +277,7 @@ function App() {
           </div>
 
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[#FF8F00] text-xs tracking-[3px] md:tracking-[4px] mb-5 md:mb-6">
+            <p className="text-white/65 text-xs tracking-[3px] md:tracking-[4px] mb-5 md:mb-6">
               HAVE A PROJECT IN MIND?
             </p>
 
