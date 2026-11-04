@@ -75,7 +75,7 @@ function App() {
             <h1 className="text-[2.75rem] sm:text-6xl md:text-7xl font-semibold leading-[1.08] tracking-tight">
               Full-Stack
               <br />
-              Developer<span className="text-[#FF8F00]">.</span>
+              Developer
             </h1>
 
 
@@ -85,23 +85,23 @@ function App() {
             </p>
 
             <div className="flex items-center gap-4 mt-8 md:mt-10">
-              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="border border-white/20 p-2.5 md:p-2 bg-black rounded-full">
+              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="border border-white/20 p-2.5 md:p-2 bg-black hover:border-white/40  rounded-full">
                 <img src="/github.svg" alt="GitHub" className="w-5 h-5 invert" />
               </a>
 
-              <a href="mailto:theevinceke@gmail.com" aria-label="Email" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-[#FF8F00] hover:bg-white/5 transition">
+              <a href="mailto:theevinceke@gmail.com" aria-label="Email" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40  transition">
                 <img src="/email.svg" alt="Email" className="w-5 h-5 invert" />
               </a>
 
-              <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-[#FF8F00] hover:bg-white/5 transition">
-                <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5 invert" />
+              <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40 transition">
+                <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           <div className="flex-1 flex justify-center items-center w-full">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full border border-[#FF8F00]/20 scale-110"></div>
+              <div className="absolute inset-0 rounded-full border border-white/30 scale-110"></div>
               <img src="/vbg.jpeg" alt="Vincent Oluoch" className="w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 object-cover rounded-full border border-white/10 grayscale-[20%]" />
             </div>
           </div>
