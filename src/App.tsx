@@ -5,7 +5,7 @@ function App() {
 
   const close = () => setOpen(false);
 
-  const navigateTo = (id) => {
+  const navigateTo = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
 
