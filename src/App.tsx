@@ -1,66 +1,135 @@
-
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Lenis from "lenis";
 
 function App() {
   const [open, setOpen] = useState(false);
+  const lenisRef = useRef(null);
+
   const close = () => setOpen(false);
+
+  // Smooth mouse-wheel / trackpad / touch scrolling
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
+    // lerp = how much of the remaining distance is covered each frame.
+    // Lower = more glide/lag (0.05 floaty, 0.1 default, 0.2 snappy).
+    const lenis = new Lenis({
+      lerp: 0.07,
+      wheelMultiplier: 1,
+      smoothWheel: true,
+    });
+    lenisRef.current = lenis;
+
+    let rafId;
+    const raf = (time) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+      lenisRef.current = null;
+    };
+  }, []);
+
+  const navigateTo = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const wasOpen = open;
+    close();
+
+    const scroll = () => {
+      const NAV_OFFSET = 120; // matches scroll-mt-24
+      const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+
+      if (lenisRef.current) {
+        lenisRef.current.scrollTo(Math.max(top, 0), { duration: 1.2 });
+      } else {
+        window.scrollTo({ top: Math.max(top, 0), behavior: "auto" });
+      }
+    };
+
+    // If the mobile menu was open, wait for its 300ms collapse
+    // so the layout is stable before scrolling.
+    wasOpen ? setTimeout(scroll, 920) : scroll();
+  };
 
   return (
     <div className="bg-black/97 min-h-screen text-white px-0 pt-0 pb-0">
       <div className="min-h-screen border-x border-white/10 overflow-x-clip">
 
-        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/5 backdrop-blur-md md:ml-10 md:mr-9">
-          <div className="flex justify-between items-center px-5 sm:px-10 py-4 md:py-5">
-            <h1 className="font-bold text-2xl text-white tracking-wide">
-              vincent oluoch
-              <span className="inline-block w-2 h-2  bg-[#4A4A4A] ml-1"></span>
-            </h1>
+        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/5 backdrop-blur-md">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10">
+            <div className="flex justify-between items-center py-4 md:py-5">
 
-            <ul className="hidden md:flex gap-8 text-sm text-white/80">
-              <li><a href="#home" className="hover:text-white transition-colors">01. Home</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">02. About</a></li>
-              <li><a href="#projects" className="hover:text-white transition-colors">03. Projects</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">04. Contact</a></li>
-            </ul>
+              <h1 className="font-bold text-2xl text-white">
+                vincent oluoch
+                <span className="inline-block w-2 h-2 bg-[#4A4A4A] ml-1"></span>
+              </h1>
 
-            <div className="hidden lg:flex items-center gap-3">
-              <a href="/cv.pdf" download className="border  bg-white border-white/20 text-black px-6 py-2 text-sm rounded-full hover:bg-white/75 hover:border-[#4A4A4A] hover:text-[#FF8F04A4A4A] transition">
-                Download CV
-              </a>
-              <div className="flex items-center gap-2 border border-white/10 px-4 py-2 rounded-full text-sm text-white/70">
-                Available for projects
-              </div>
-            </div>
-
-            <button
-              onClick={() => setOpen(!open)}
-              aria-label={open ? "Close menu" : "Open menu"}
-              aria-expanded={open}
-              aria-controls="mobile-menu"
-              className="md:hidden flex flex-col justify-center gap-[5px] w-10 h-10 -mr-2 items-end"
-            >
-              <span className={`block h-px bg-white transition-all duration-300 ${open ? "w-5 translate-y-[3px] rotate-45" : "w-6"}`}></span>
-              <span className={`block h-px bg-white transition-all duration-300 ${open ? "w-5 -translate-y-[3px] -rotate-45" : "w-4"}`}></span>
-            </button>
-          </div>
-
-          <div id="mobile-menu" className={`md:hidden grid transition-all duration-300 ${open ? "grid-rows-[1fr] border-t border-white/10" : "grid-rows-[0fr]"}`}>
-            <div className="overflow-hidden">
-              <ul className="px-5 sm:px-10 py-3 text-base text-white/80">
-                <li className="border-b border-white/5"><a href="#home" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">01. Home</a></li>
-                <li className="border-b border-white/5"><a href="#about" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">02. About</a></li>
-                <li className="border-b border-white/5"><a href="#projects" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">03. Projects</a></li>
-                <li><a href="#contact" onClick={close} className="block py-3.5 hover:text-[#4A4A4A] transition-colors">04. Contact</a></li>
+              <ul className="hidden md:flex gap-8 text-sm text-white/80">
+                <li><button onClick={() => navigateTo("home")} className="hover:text-white transition-colors">01. Home</button></li>
+                <li><button onClick={() => navigateTo("about")} className="hover:text-white transition-colors">02. About</button></li>
+                <li><button onClick={() => navigateTo("projects")} className="hover:text-white transition-colors">03. Projects</button></li>
+                <li><button onClick={() => navigateTo("contact")} className="hover:text-white transition-colors">04. Contact</button></li>
               </ul>
-              <div className="px-5 sm:px-10 pb-6 flex flex-wrap items-center gap-3">
-                <a href="/cv.pdf" download onClick={close} className="border border-white/20 text-white px-5 py-2.5 text-sm rounded-full hover:border-[#4A4A4A] hover:text-[#4A4A4A] transition">
+
+              <div className="hidden lg:flex items-center gap-3">
+                <a href="/cv.pdf" download className="border bg-white border-white/20 text-black px-6 py-2 text-sm rounded-full hover:bg-white/75 transition">
                   Download CV
                 </a>
-                <div className="flex items-center gap-2 border border-white/10 px-4 py-2.5 rounded-full text-sm text-white/70">
+
+                <div className="flex items-center gap-2 border border-white/10 px-4 py-2 rounded-full text-sm text-white/70">
                   Available for projects
                 </div>
               </div>
+
+              <button
+                onClick={() => setOpen(!open)}
+                aria-label={open ? "Close menu" : "Open menu"}
+                aria-expanded={open}
+                aria-controls="mobile-menu"
+                className="md:hidden flex flex-col justify-center gap-[5px] w-10 h-10 -mr-2 items-end"
+              >
+                <span className={`block h-px bg-white transition-all duration-300 ${open ? "w-5 translate-y-[3px] rotate-45" : "w-6"}`}></span>
+                <span className={`block h-px bg-white transition-all duration-300 ${open ? "w-5 -translate-y-[3px] -rotate-45" : "w-4"}`}></span>
+              </button>
+
             </div>
+
+            <div id="mobile-menu" className={`md:hidden grid transition-all duration-300 ${open ? "grid-rows-[1fr] border-t border-white/10" : "grid-rows-[0fr]"}`}>
+              <div className="overflow-hidden">
+                <ul className="py-3 text-base text-white/80">
+                  <li className="border-b border-white/5">
+                    <button onClick={() => navigateTo("home")} className="block w-full text-left py-3.5 hover:text-[#4A4A4A] transition-colors">01. Home</button>
+                  </li>
+                  <li className="border-b border-white/5">
+                    <button onClick={() => navigateTo("about")} className="block w-full text-left py-3.5 hover:text-[#4A4A4A] transition-colors">02. About</button>
+                  </li>
+                  <li className="border-b border-white/5">
+                    <button onClick={() => navigateTo("projects")} className="block w-full text-left py-3.5 hover:text-[#4A4A4A] transition-colors">03. Projects</button>
+                  </li>
+                  <li>
+                    <button onClick={() => navigateTo("contact")} className="block w-full text-left py-3.5 hover:text-[#4A4A4A] transition-colors">04. Contact</button>
+                  </li>
+                </ul>
+
+                <div className="pb-6 flex flex-wrap items-center gap-3">
+                  <a href="/cv.pdf" download onClick={close} className="border border-white/20 text-white px-5 py-2.5 text-sm rounded-full hover:border-[#4A4A4A] transition">
+                    Download CV
+                  </a>
+
+                  <div className="flex items-center gap-2 border border-white/10 px-4 py-2.5 rounded-full text-sm text-white/70">
+                    Available for projects
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </nav>
 
@@ -74,7 +143,7 @@ function App() {
               Full-Stack
               <br />
               Developer
-              <span className="inline-block w-3 h-3  bg-white/60"></span>
+              <span className="inline-block w-3 h-3 bg-white/60"></span>
             </h1>
 
             <p className="text-white/40 mt-6 md:mt-8 text-[15px] md:text-base max-w-lg leading-7 md:leading-8">
@@ -116,7 +185,7 @@ function App() {
                 Turning ideas into
                 <span className="text-white font-playful text-5xl sm:text-6xl"> digital</span>
                 <br />
-                <span className="text-white font-playful text-5xl sm:text-6xl">experiences<span className="inline-block w-2 h-2  bg-white ml-2"></span></span>
+                <span className="text-white font-playful text-5xl sm:text-6xl">experiences<span className="inline-block w-2 h-2 bg-white ml-2"></span></span>
               </h2>
 
               <p className="text-white/50 text-[15px] md:text-base leading-7 md:leading-8 mt-6 md:mt-8 max-w-xl">
@@ -150,7 +219,7 @@ function App() {
 
                 <div className="py-6 md:py-8">
                   <p className="text-white/40 text-xs tracking-widest mb-3">CURRENT FOCUS</p>
-                  <h3 className="text-xl sm:text-2xl font-semibold">Full-Stack Development </h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">Full-Stack Development</h3>
                   <p className="text-white/40 text-sm mt-3 leading-7">
                     Building scalable applications with intuitive interfaces
                     and reliable backend systems.
@@ -194,7 +263,7 @@ function App() {
           <div className="flex justify-between items-end gap-4 mb-8 md:mb-10">
             <div>
               <h2 className="text-[1.75rem] sm:text-3xl md:text-4xl font-semibold tracking-tight">
-                Selected Projects<span className="inline-block w-2 h-2 ml-2  bg-[#4A4A4A]"></span>
+                Selected Projects<span className="inline-block w-2 h-2 ml-2 bg-[#4A4A4A]"></span>
               </h2>
               <p className="text-white/40 text-sm mt-3">
                 A few things I've been <span className="font-playful text-white text-lg">building.</span>
@@ -202,7 +271,7 @@ function App() {
             </div>
 
             <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="shrink-0 py-2 text-xs text-white/50 hover:text-[#4A4A4A] transition">
-              GitHub 
+              GitHub
             </a>
           </div>
 
@@ -276,7 +345,7 @@ function App() {
 
             <h2 className="text-[2.25rem] text-[#4A4A4A] sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
               Let's build something
-              <span className="text-white font-playful text-5xl sm:text-6xl md:text-7xl font-medium"> meaningful<span className="inline-block w-2 h-2 ml-2  bg-white"></span></span>
+              <span className="text-white font-playful text-5xl sm:text-6xl md:text-7xl font-medium"> meaningful<span className="inline-block w-2 h-2 ml-2 bg-white"></span></span>
             </h2>
 
             <p className="text-white/40 text-sm md:text-base leading-7 md:leading-8 max-w-xl mx-auto mt-6 md:mt-7">
