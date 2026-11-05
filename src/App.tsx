@@ -9,7 +9,7 @@ function App() {
     <div className="bg-black/97 min-h-screen text-white px-0 pt-0 pb-0">
       <div className="min-h-screen border-x border-white/10 overflow-x-clip">
 
-        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/5 backdrop-blur-md">
+        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/5 backdrop-blur-md md:ml-10 md:mr-9">
           <div className="flex justify-between items-center px-5 sm:px-10 py-4 md:py-5">
             <h1 className="font-bold text-2xl text-white tracking-wide">
               vincent oluoch
@@ -17,10 +17,10 @@ function App() {
             </h1>
 
             <ul className="hidden md:flex gap-8 text-sm text-white/80">
-              <li><a href="#home" className="hover:text-[#FF8F04A4A4A] transition-colors">01. Home</a></li>
-              <li><a href="#about" className="hover:text-[#4A4A4A] transition-colors">02. About</a></li>
-              <li><a href="#projects" className="hover:text-[[#4A4A4A]] transition-colors">03. Projects</a></li>
-              <li><a href="#contact" className="hover:text-[#[#4A4A4A]] transition-colors">04. Contact</a></li>
+              <li><a href="#home" className="hover:text-white transition-colors">01. Home</a></li>
+              <li><a href="#about" className="hover:text-white transition-colors">02. About</a></li>
+              <li><a href="#projects" className="hover:text-white transition-colors">03. Projects</a></li>
+              <li><a href="#contact" className="hover:text-white transition-colors">04. Contact</a></li>
             </ul>
 
             <div className="hidden lg:flex items-center gap-3">
@@ -28,7 +28,6 @@ function App() {
                 Download CV
               </a>
               <div className="flex items-center gap-2 border border-white/10 px-4 py-2 rounded-full text-sm text-white/70">
-                <span className="w-2 h-2 rounded bg-[#B1CCB1]"></span>
                 Available for projects
               </div>
             </div>
@@ -58,7 +57,6 @@ function App() {
                   Download CV
                 </a>
                 <div className="flex items-center gap-2 border border-white/10 px-4 py-2.5 rounded-full text-sm text-white/70">
-                  <span className="w-2 h-2 rounded-full bg-[#4A4A4A]"></span>
                   Available for projects
                 </div>
               </div>
@@ -76,6 +74,7 @@ function App() {
               Full-Stack
               <br />
               Developer
+              <span className="inline-block w-3 h-3  bg-white/60"></span>
             </h1>
 
             <p className="text-white/40 mt-6 md:mt-8 text-[15px] md:text-base max-w-lg leading-7 md:leading-8">
@@ -117,7 +116,7 @@ function App() {
                 Turning ideas into
                 <span className="text-white font-playful text-5xl sm:text-6xl"> digital</span>
                 <br />
-                <span className="text-white font-playful text-5xl sm:text-6xl">experiences.</span>
+                <span className="text-white font-playful text-5xl sm:text-6xl">experiences<span className="inline-block w-2 h-2  bg-white ml-2"></span></span>
               </h2>
 
               <p className="text-white/50 text-[15px] md:text-base leading-7 md:leading-8 mt-6 md:mt-8 max-w-xl">
@@ -151,7 +150,7 @@ function App() {
 
                 <div className="py-6 md:py-8">
                   <p className="text-white/40 text-xs tracking-widest mb-3">CURRENT FOCUS</p>
-                  <h3 className="text-xl sm:text-2xl font-semibold">Full-Stack Development</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">Full-Stack Development </h3>
                   <p className="text-white/40 text-sm mt-3 leading-7">
                     Building scalable applications with intuitive interfaces
                     and reliable backend systems.
@@ -195,7 +194,7 @@ function App() {
           <div className="flex justify-between items-end gap-4 mb-8 md:mb-10">
             <div>
               <h2 className="text-[1.75rem] sm:text-3xl md:text-4xl font-semibold tracking-tight">
-                Selected Projects<span className="text-[#4A4A4A]">.</span>
+                Selected Projects<span className="inline-block w-2 h-2 ml-2  bg-[#4A4A4A]"></span>
               </h2>
               <p className="text-white/40 text-sm mt-3">
                 A few things I've been <span className="font-playful text-white text-lg">building.</span>
@@ -203,7 +202,7 @@ function App() {
             </div>
 
             <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="shrink-0 py-2 text-xs text-white/50 hover:text-[#4A4A4A] transition">
-              GitHub ↗
+              GitHub 
             </a>
           </div>
 
@@ -229,8 +228,8 @@ function App() {
                 </div>
 
                 <div className="flex gap-6 mt-5 pt-2 border-t border-white/10">
-                  <a href="https://trak-gilt.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition">Live Preview ↗</a>
-                  <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition">GitHub ↗</a>
+                  <a href="https://trak-gilt.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">Live Preview</a>
+                  <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">GitHub</a>
                 </div>
               </div>
             </div>
@@ -256,8 +255,8 @@ function App() {
                 </div>
 
                 <div className="flex gap-6 mt-5 pt-2 border-t border-white/10">
-                  <a href="https://smart-season-lilac.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition">Live Preview ↗</a>
-                  <a href="https://github.com/oluochvn/smartSeason" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition">GitHub ↗</a>
+                  <a href="https://smart-season-lilac.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">Live Preview</a>
+                  <a href="https://github.com/oluochvn/smartSeason" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">GitHub</a>
                 </div>
               </div>
             </div>
@@ -277,7 +276,7 @@ function App() {
 
             <h2 className="text-[2.25rem] text-[#4A4A4A] sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
               Let's build something
-              <span className="text-white font-playful text-5xl sm:text-6xl md:text-7xl font-medium"> meaningful.</span>
+              <span className="text-white font-playful text-5xl sm:text-6xl md:text-7xl font-medium"> meaningful<span className="inline-block w-2 h-2 ml-2  bg-white"></span></span>
             </h2>
 
             <p className="text-white/40 text-sm md:text-base leading-7 md:leading-8 max-w-xl mx-auto mt-6 md:mt-7">
@@ -291,9 +290,9 @@ function App() {
             </a>
 
             <div className="flex justify-center items-center gap-8 mt-12 md:mt-14">
-              <a href="mailto:theevinceke@gmail.com" className="py-2 text-xs text-white/40 hover:text-[#4A4A4A] transition">Email</a>
-              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-[#4A4A4A] transition">GitHub</a>
-              <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-[#4A4A4A] transition">LinkedIn</a>
+              <a href="mailto:theevinceke@gmail.com" className="py-2 text-xs text-white/40 hover:text-white transition">Email</a>
+              <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-white transition">GitHub</a>
+              <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" className="py-2 text-xs text-white/40 hover:text-white transition">LinkedIn</a>
             </div>
           </div>
 
