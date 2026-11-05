@@ -1,61 +1,28 @@
-import { useEffect, useRef, useState } from "react";
-import Lenis from "lenis";
+import { useState } from "react";
 
 function App() {
   const [open, setOpen] = useState(false);
-  const lenisRef = useRef(null);
 
   const close = () => setOpen(false);
-
-  // Smooth mouse-wheel / trackpad / touch scrolling
-  useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) return;
-
-    // lerp = how much of the remaining distance is covered each frame.
-    // Lower = more glide/lag (0.05 floaty, 0.1 default, 0.2 snappy).
-    const lenis = new Lenis({
-      lerp: 0.07,
-      wheelMultiplier: 1,
-      smoothWheel: true,
-    });
-    lenisRef.current = lenis;
-
-    let rafId;
-    const raf = (time) => {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    };
-    rafId = requestAnimationFrame(raf);
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      lenis.destroy();
-      lenisRef.current = null;
-    };
-  }, []);
 
   const navigateTo = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
 
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const wasOpen = open;
+
     close();
 
-    const scroll = () => {
-      const NAV_OFFSET = 120; // matches scroll-mt-24
-      const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-
-      if (lenisRef.current) {
-        lenisRef.current.scrollTo(Math.max(top, 0), { duration: 1.2 });
-      } else {
-        window.scrollTo({ top: Math.max(top, 0), behavior: "auto" });
-      }
-    };
+    const scroll = () =>
+      el.scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "start",
+      });
 
     // If the mobile menu was open, wait for its 300ms collapse
     // so the layout is stable before scrolling.
-    wasOpen ? setTimeout(scroll, 920) : scroll();
+    wasOpen ? setTimeout(scroll, 320) : scroll();
   };
 
   return (
