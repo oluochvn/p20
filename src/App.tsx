@@ -6,14 +6,9 @@ function App() {
   const lenisRef = useRef<Lenis | null>(null);
 
   const close = () => setOpen(false);
-
-  // Smooth mouse-wheel / trackpad / touch scrolling
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) return;
-
-    // lerp = how much of the remaining distance is covered each frame.
-    // Lower = more glide/lag (0.05 floaty, 0.1 default, 0.2 snappy).
     const lenis = new Lenis({
       lerp: 0.07,
       wheelMultiplier: 1,
@@ -67,8 +62,15 @@ function App() {
             <div className="flex justify-between items-center py-4 md:py-5">
 
               <h1 className="font-bold text-2xl text-white">
-                vincent oluoch
-                <span className="inline-block w-2 h-2 bg-[#4A4A4A] ml-1"></span>
+                <a href="#home" aria-label="Vincent Oluoch home" className="group inline-flex">
+                  <span className="relative block h-10 w-[5.25rem] overflow-hidden">
+                    <img
+                      src="/logo.png"
+                      alt=""
+                      className="absolute left-1/2 top-1/2 w-[218px] max-w-none -translate-x-1/2 -translate-y-1/2 grayscale brightness-[0.4] transition duration-300 group-hover:grayscale-0 group-hover:brightness-100 group-focus-visible:grayscale-0 group-focus-visible:brightness-100"
+                    />
+                  </span>
+                </a>
               </h1>
 
               <ul className="hidden md:flex gap-8 text-sm text-white/80">
