@@ -277,8 +277,12 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             <div className="group border border-white/10 bg-white/[0.02] rounded overflow-hidden hover:border-white/20 transition">
-              <div className="relative h-32 md:h-36 bg-[#101010] flex items-center justify-center">
-                <p className="text-[1.65rem] md:text-3xl font-bold tracking-tight">pesatrak</p>
+              <div className="relative h-40 md:h-44 bg-[#101010] flex items-center justify-center">
+                <img
+                  src="/pesatrack.png"
+                  alt="Pesatrak finance dashboard"
+                  className="w-full h-full object-cover object-top grayscale transition duration-300 group-hover:grayscale-0"
+                />
                 <span className="absolute top-4 left-4 text-[10px] text-white/30">01 / 02</span>
                 <span className="absolute top-4 right-4 text-[10px]">FINTECH</span>
               </div>
