@@ -289,6 +289,10 @@ function App() {
                   A personal finance application for tracking transactions,
                   managing expenses, and monitoring savings goals.
                 </p>
+                <p className="text-xs text-white/50 mt-3">
+                test credentials<br />
+                  email: <span className="text-white">test@example.com</span> | Password: <span className="text-white">654321</span>
+                </p>
 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {["React", "Node.js", "MongoDB", "Tailwind"].map((tech) => (
@@ -297,7 +301,7 @@ function App() {
                 </div>
 
                 <div className="flex gap-6 mt-5 pt-2 border-t border-white/10">
-                  <a href="https://trak-gilt.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">Live Preview</a>
+                  <a href="https://aug24pay-theta.vercel.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">Live Preview</a>
                   <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">GitHub</a>
                 </div>
               </div>
