@@ -38,7 +38,7 @@ function App() {
     close();
 
     const scroll = () => {
-      const NAV_OFFSET = 96; // matches scroll-mt-24
+      const NAV_OFFSET = 96;
       const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
 
       if (lenisRef.current) {
@@ -47,9 +47,6 @@ function App() {
         window.scrollTo({ top: Math.max(top, 0), behavior: "auto" });
       }
     };
-
-    // If the mobile menu was open, wait for its 300ms collapse
-    // so the layout is stable before scrolling.
     wasOpen ? setTimeout(scroll, 320) : scroll();
   };
 
@@ -62,7 +59,7 @@ function App() {
             <div className="flex justify-between items-center py-4 md:py-5">
 
               <h1 className="font-bold text-2xl text-white">
-                <a href="#home" aria-label="Vincent Oluoch home" className="group inline-flex">
+                <button onClick={() => navigateTo("home")} aria-label="Vincent Oluoch home" className="group inline-flex">
                   <span className="relative block h-10 w-[5.25rem] overflow-hidden">
                     <img
                       src="/logo.png"
@@ -70,7 +67,7 @@ function App() {
                       className="absolute left-1/2 top-1/2 w-[218px] max-w-none -translate-x-1/2 -translate-y-1/2 grayscale brightness-[0.4] transition duration-300 group-hover:grayscale-0 group-hover:brightness-100 group-focus-visible:grayscale-0 group-focus-visible:brightness-100"
                     />
                   </span>
-                </a>
+                </button>
               </h1>
 
               <ul className="hidden md:flex gap-8 text-sm text-white/80">
