@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Lenis from "lenis";
 
 function App() {
@@ -379,6 +380,7 @@ function App() {
           </div>
         </section>
 
+        <Analytics />
       </div>
     </div>
   );
