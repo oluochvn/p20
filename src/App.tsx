@@ -56,11 +56,9 @@ function App() {
     <Analytics />
     <div className="bg-black/97 min-h-screen text-white px-0 pt-0 pb-0">
       <div className="min-h-screen border-x border-white/10 overflow-x-clip">
-
         <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/5 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-5 sm:px-10">
             <div className="flex justify-between items-center py-4 md:py-5">
-
               <h1 className="font-bold text-2xl text-white">
                 <button onClick={() => navigateTo("home")} aria-label="Vincent Oluoch home" className="group inline-flex">
                   <span className="relative block h-10 w-[5.25rem] overflow-hidden">
@@ -72,24 +70,20 @@ function App() {
                   </span>
                 </button>
               </h1>
-
               <ul className="hidden md:flex gap-8 text-sm text-white/80">
                 <li><button onClick={() => navigateTo("home")} className="hover:text-white transition-colors">01. Home</button></li>
                 <li><button onClick={() => navigateTo("about")} className="hover:text-white transition-colors">02. About</button></li>
                 <li><button onClick={() => navigateTo("projects")} className="hover:text-white transition-colors">03. Projects</button></li>
                 <li><button onClick={() => navigateTo("contact")} className="hover:text-white transition-colors">04. Contact</button></li>
               </ul>
-
               <div className="hidden lg:flex items-center gap-3">
                 <a href="/cv.pdf" download className="border bg-white border-white/20 text-black px-6 py-2 text-sm rounded-full hover:bg-white/75 transition">
                   Download CV
                 </a>
-
                 <div className="flex items-center gap-2 border border-white/10 px-4 py-2 rounded-full text-sm text-white/70">
                   Available for projects
                 </div>
               </div>
-
               <button
                 onClick={() => setOpen(!open)}
                 aria-label={open ? "Close menu" : "Open menu"}
@@ -118,12 +112,10 @@ function App() {
                     <button onClick={() => navigateTo("contact")} className="block w-full text-left py-3.5 hover:text-[#4A4A4A] transition-colors">04. Contact</button>
                   </li>
                 </ul>
-
                 <div className="pb-6 flex flex-wrap items-center gap-3">
                   <a href="/cv.pdf" download onClick={close} className="border border-white/20 text-white px-5 py-2.5 text-sm rounded-full hover:border-[#4A4A4A] transition">
                     Download CV
                   </a>
-
                   <div className="flex items-center gap-2 border border-white/10 px-4 py-2.5 rounded-full text-sm text-white/70">
                     Available for projects
                   </div>
@@ -133,33 +125,27 @@ function App() {
 
           </div>
         </nav>
-
         <section id="home" className="scroll-mt-24 max-w-7xl mx-auto px-5 sm:px-10 pt-12 pb-16 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
           <div className="flex-1 w-full">
-            <p className="text-[#DBDBDB] tracking-[3px] md:tracking-[4px] text-xs mb-6 md:mb-8">
+            <p className="text-[#DBDBDB] tracking-[3px] sm:text-center md:tracking-[4px] text-xs mb-6 md:mb-8">
               HELLO, I'M VINCENT
             </p>
-
-            <h1 className="text-[2.75rem] text-white/80 sm:text-6xl md:text-7xl font-semibold leading-[1.08] tracking-tight">
+            <h1 className="text-[2.75rem] text-white/80 sm:text-6xl sm:text-center md:text-7xl font-semibold leading-[1.08] tracking-tight">
               Full-Stack
               <br />
               Developer
               <span className="inline-block w-3 h-3 bg-white/60"></span>
             </h1>
-
-            <p className="text-white/40 mt-6 md:mt-8 text-[15px] md:text-base max-w-lg leading-7 md:leading-8">
+            <p className="text-white/40 mt-6 md:mt-8 text-[15px] sm:text-center md:text-base max-w-lg leading-7 md:leading-8">
               I build modern web applications, combining thoughtful design with functional and scalable solutions.
             </p>
-
-            <div className="flex items-center gap-4 mt-8 md:mt-10">
+            <div className="flex sm:justify-center items-center gap-4 mt-8 md:mt-10">
               <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="border border-white/20 p-2.5 md:p-2 bg-black hover:border-white/40 rounded-full">
                 <img src="/github.svg" alt="GitHub" className="w-5 h-5 invert" />
               </a>
-
               <a href="mailto:theevinceke@gmail.com" aria-label="Email" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40 transition">
                 <img src="/email.svg" alt="Email" className="w-5 h-5 invert" />
               </a>
-
               <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40 transition">
                 <img src="/linkedin1.svg" alt="LinkedIn" className="w-5 h-5" />
               </a>
@@ -351,7 +337,6 @@ function App() {
             </p>
           </div>
         </section>
-        
       </div>
     </div>
     </>
