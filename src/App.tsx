@@ -165,9 +165,9 @@ function App() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <h2 className="text-[2rem] sm:text-4xl text-[#4A4A4A] md:text-5xl font-semibold tracking-tight leading-tight">
+              <h2 className="text-white font-playful text-5xl sm:text-6xl">
                 Turning ideas into
-                <span className="text-white font-playful text-5xl sm:text-6xl"> digital</span>
+                <span className="text-white font-playful text-5xl sm:text-6xl"> Digital</span>
                 <br />
                 <span className="text-white font-playful text-5xl sm:text-6xl">experiences<span className="inline-block w-2 h-2 bg-white ml-2"></span></span>
               </h2>
