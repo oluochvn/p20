@@ -95,7 +95,6 @@ function App() {
                 <span className={`block h-px bg-white transition-all duration-300 ${open ? "w-5 -translate-y-[3px] -rotate-45" : "w-4"}`}></span>
               </button>
             </div>
-
             <div id="mobile-menu" className={`md:hidden grid transition-all duration-300 ${open ? "grid-rows-[1fr] border-t border-white/10" : "grid-rows-[0fr]"}`}>
               <div className="overflow-hidden">
                 <ul className="py-3 text-base text-white/80">
@@ -122,7 +121,6 @@ function App() {
                 </div>
               </div>
             </div>
-
           </div>
         </nav>
         <section id="home" className="scroll-mt-24 max-w-7xl mx-auto px-5 sm:px-10 pt-12 pb-16 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
@@ -149,7 +147,7 @@ function App() {
               <a href="https://www.linkedin.com/in/oluochvn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="border border-white/20 p-2.5 md:p-2 rounded-full hover:border-white/40 transition">
                 <img src="/linkedin1.svg" alt="LinkedIn" className="w-5 h-5" />
               </a>
-            </div>
+            </div>  
           </div>
           <div className="flex-1 flex justify-center items-center w-full">
             <div className="relative">
@@ -172,9 +170,9 @@ function App() {
                 <span className="text-white font-playful text-5xl sm:text-6xl">experiences<span className="inline-block w-2 h-2 bg-white ml-2"></span></span>
               </h2>
               <p className="text-white/50 text-[15px] md:text-base leading-7 md:leading-8 mt-6 md:mt-8 max-w-xl">
-                I'm Vincent Oluoch, a developer passionate about building modern,
-                functional, and user-focused web applications. I enjoy turning
-                complex problems into simple and practical digital solutions.
+                I'm Vincent Oluoch, a developer who is  passionate about building modernized,
+                working, and user-friendly web applications. I enjoy turning
+                diffucult problems into simple and practical digital solutions.
               </p>
               <p className="text-white/50 text-[15px] md:text-base leading-7 md:leading-8 mt-4 md:mt-5 max-w-xl">
                 My experience spans frontend and backend development, working
@@ -193,11 +191,10 @@ function App() {
             <div className="relative">
               <div className="relative border border-white/10 bg-white/[0.025] rounded p-6 sm:p-8">
                 <div className="flex justify-between items-center border-b border-white/10 pb-5 md:pb-6">
-                  <span className="text-xs tracking-widest text-white/40">PROFILE OVERVIEW</span>
-                  <span className="text-xs">01.001</span>
+                  <span className="text-xs tracking-widest text-white">PROFILE OVERVIEW</span>
                 </div>
                 <div className="py-6 md:py-8">
-                  <p className="text-white/40 text-xs tracking-widest mb-3">CURRENT FOCUS</p>
+                  <p className="text-white/60 text-xs tracking-widest mb-3">CURRENT FOCUS</p>
                   <h3 className="text-xl sm:text-2xl font-semibold">Full-Stack Development</h3>
                   <p className="text-white/40 text-sm mt-3 leading-7">
                     Building scalable applications with intuitive interfaces
@@ -223,7 +220,7 @@ function App() {
                   </div>
                 </div>
                 <div className="border-t border-white/10 mt-6 md:mt-7 pt-5 md:pt-6 flex flex-wrap items-center justify-between gap-3">
-                  <span className="text-white/40 text-xs">BASED IN KENYA</span>
+                  <span className="text-white/70 text-xs">BASED IN KENYA</span>
                 </div>
               </div>
             </div>
@@ -261,8 +258,7 @@ function App() {
               <div className="p-5">
                 <h3 className="text-lg font-semibold">Pesatrak</h3>
                 <p className="text-white/40 text-[13px] md:text-xs leading-6 mt-2">
-                  A personal finance application for tracking transactions,
-                  managing expenses, and monitoring savings goals.
+                  A personal finance application for tracking daily transactions and monitoring savings goals.
                 </p>
                 <p className="text-xs text-white/50 mt-3">
                 test credentials<br />
@@ -274,7 +270,7 @@ function App() {
                   ))}
                 </div>
                 <div className="flex gap-6 mt-5 pt-2 border-t border-white/10">
-                  <a href="https://aug24pay-theta.vercel.app/login" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">Live Preview</a>
+                  <a href="https://aug24pay-theta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">Live Preview</a>
                   <a href="https://github.com/oluochvn" target="_blank" rel="noopener noreferrer" className="text-xs text-white/60 py-2.5 transition hover:text-white">GitHub</a>
                 </div>
               </div>
@@ -288,7 +284,7 @@ function App() {
               <div className="p-5">
                 <h3 className="text-lg font-semibold">SmartSeason</h3>
                 <p className="text-white/40 text-[13px] md:text-xs leading-6 mt-2">
-                  A field management application with role-based access,
+                  A field management application with role-based access for farm manager and field
                   field tracking, and assessment records.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-4">
